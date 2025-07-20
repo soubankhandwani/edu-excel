@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /wp-admin
+Disallow: /cgi-bin/
+Sitemap: http://edu-excel.com/sitemap.xml

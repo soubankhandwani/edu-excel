@@ -1,0 +1,408 @@
+## Web Data Analytics Practical 2
+
+Aim: Page Rank for link analysis using python Create a small set of pages namely page1,
+page2, page3 and page4 apply random walk on the same
+
+!pip install numpy
+
+import numpy as np
+
+links = {
+    'page1': ['page2', 'page3'],
+    'page2': ['page3'],
+    'page3': ['page1'],
+    'page4': ['page1', 'page3']
+}
+
+pages = list(links.keys())
+n_pages = len(pages)
+
+page_rank = {page: 1 / n_pages for page in pages}
+damping_factor = 0.85
+iterations = 100
+
+for _ in range(iterations):
+    new_page_rank = {page: (1 - damping_factor) / n_pages for page in pages}
+
+    for page, out_links in links.items():
+        if out_links:
+            share = page_rank[page] / len(out_links)
+            for linked_page in out_links:
+                new_page_rank[linked_page] += damping_factor * share
+
+    page_rank = new_page_rank
+
+# Output the final PageRank values
+for page, rank in page_rank.items():
+    print(f'{page}: {rank:.4f}')
+
+---
+
+## Web Data Analytics Practical 3
+
+Aim: Perform Spam Classifier
+
+!pip install pandas scikit-learn
+
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+
+# Load dataset
+df = pd.read_csv('./dataset/spam.csv', encoding='latin-1')
+
+# Keep only relevant columns
+df = df[['v1', 'v2']]
+df.columns = ['label', 'text']
+
+# Encode labels
+df['label'] = df['label'].map({'ham': 0, 'spam': 1})
+    
+# Split dataset
+X_train, X_test, y_train, y_test = train_test_split(
+    df['text'], df['label'], test_size=0.2, random_state=42
+)
+
+# TF-IDF vectorization
+vectorizer = TfidfVectorizer(stop_words='english', max_df=0.7)
+X_train_tfidf = vectorizer.fit_transform(X_train)
+X_test_tfidf = vectorizer.transform(X_test)
+
+# Train classifier
+clf = MultinomialNB()
+clf.fit(X_train_tfidf, y_train)
+
+# Predict and evaluate
+y_pred = clf.predict(X_test_tfidf)
+accuracy = accuracy_score(y_test, y_pred)
+precision = precision_score(y_test, y_pred)
+recall = recall_score(y_test, y_pred)
+f1 = f1_score(y_test, y_pred)
+
+# Output metrics
+print(f'Accuracy: {accuracy:.4f}')
+print(f'Precision: {precision:.4f}')
+print(f'Recall: {recall:.4f}')
+print(f'F1 Score: {f1:.4f}')
+
+---
+
+## Web Data Analytics Practical 4
+
+Aim: Demonstrate Text Mining and Webpage Pre-processing using meta information
+from the web pages (Local/Online)
+
+import requests
+from bs4 import BeautifulSoup
+
+import nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from nltk.stem import WordNetLemmatizer
+
+# Download necessary NLTK resources
+nltk.download('punkt')
+nltk.download('punkt_tab')
+nltk.download('stopwords')
+nltk.download('wordnet')
+
+# Set the target URL
+url = 'https://www.nextgenpixel.co.in/'
+response = requests.get(url)
+
+if response.status_code == 200:
+    html_content = response.text
+    # Parse the HTML content
+    soup = BeautifulSoup(html_content, 'html.parser')
+
+    # Extract the title
+    title = soup.title.string if soup.title else 'No title'
+
+    # Extract meta description
+    description_tag = soup.find('meta', attrs={'name': 'description'})
+    description = description_tag['content'] if description_tag and 'content' in description_tag.attrs else 'No description'
+
+    # Extract meta keywords
+    keywords_tag = soup.find('meta', attrs={'name': 'keywords'})
+    keywords = keywords_tag['content'] if keywords_tag and 'content' in keywords_tag.attrs else 'No keywords'
+
+    print(f"Title: {title}")
+    print(f"Description: {description}")
+    print(f"Keywords: {keywords}")
+
+    # Combine the title, description, and keywords into a single text
+    text = f"{title} {description} {keywords}"
+
+    # Tokenize the text
+    tokens = word_tokenize(text)
+
+    # Convert to lower case
+    tokens = [token.lower() for token in tokens]
+
+    # Remove stopwords
+    stop_words = set(stopwords.words('english'))
+    tokens = [token for token in tokens if token not in stop_words and token.isalpha()]
+
+    # Lemmatize the tokens
+    lemmatizer = WordNetLemmatizer()
+    tokens = [lemmatizer.lemmatize(token) for token in tokens]
+
+    # Join tokens back into a string
+    processed_text = ' '.join(tokens)
+
+    print(f"Processed Text: {processed_text}")
+else:
+    print(f"Failed to retrieve webpage. Status code: {response.status_code}")
+
+--- 
+
+## Web Data Analytics Practical Number 5
+
+Aim: Apriori Algorithm implementation in case study.
+
+!pip install mlxtend
+
+import pandas as pd
+from mlxtend.preprocessing import TransactionEncoder
+from mlxtend.frequent_patterns import apriori, association_rules
+
+# Sample transaction data
+data = {
+    'Transaction': [1, 2, 3, 4, 5],
+    'Items': [
+        ['Milk', 'Bread', 'Butter'],
+        ['Bread', 'Butter'],
+        ['Milk', 'Bread'],
+        ['Milk', 'Bread', 'Butter', 'Eggs'],
+        ['Milk', 'Eggs']
+    ]
+}
+
+# Create DataFrame
+df = pd.DataFrame(data)
+
+# One-hot encode the item lists
+te = TransactionEncoder()
+te_ary = te.fit_transform(df['Items'])
+df_encoded = pd.DataFrame(te_ary, columns=te.columns_)
+
+print("One-hot encoded DataFrame:")
+print(df_encoded)
+
+# Find frequent itemsets
+frequent_itemsets = apriori(df_encoded, min_support=0.6, use_colnames=True)
+print("\nFrequent Itemsets:")
+print(frequent_itemsets)
+
+# Generate association rules
+rules = association_rules(frequent_itemsets, metric='confidence', min_threshold=0.7)
+print("\nAssociation Rules:")
+print(rules)
+
+---
+
+## Web Data Analytics Practical 6
+
+Aim: Develop a basic crawler for the web search for user defined keywords.
+
+import requests
+from bs4 import BeautifulSoup
+
+keywords = ["Python", "web scraping", "data science"]
+
+def fetch_page(url):
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        return response.text
+    except requests.RequestException as e:
+        print(f"Error fetching {url}: {e}")
+        return None
+
+def parse_page(html_content):
+    soup = BeautifulSoup(html_content, 'html.parser')
+    return soup
+
+def search_keywords(soup, keywords):
+    text = soup.get_text()
+    found_keywords = {keyword: text.lower().count(keyword.lower()) for keyword in keywords}
+    return found_keywords
+
+def display_results(url, found_keywords):
+    print(f"Results for {url}:")
+    for keyword, count in found_keywords.items():
+        print(f"  {keyword}: {count}")
+    print()
+
+urls = [
+    "https://www.python.org",
+    "https://www.datasciencecentral.com",
+    "https://www.scrapinghub.com"
+]
+
+for url in urls:
+    html_content = fetch_page(url)
+    if html_content:
+        soup = parse_page(html_content)
+        found_keywords = search_keywords(soup, keywords)
+        display_results(url, found_keywords)
+
+---
+
+## Web Data Analytics Practical Number 7
+
+Aim: Develop a focused crawler for local search.
+
+!pip install beautifulsoup4 requests
+
+import requests
+from bs4 import BeautifulSoup
+from collections import deque
+
+keywords = ["Python", "web scraping", "data science"]
+seed_urls = [
+    "https://www.python.org",
+    "https://www.datasciencecentral.com",
+    "https://www.scrapinghub.com"
+]
+
+# Function to fetch web pages
+def fetch_page(url):
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        return response.text
+    except requests.RequestException as e:
+        print(f"Error fetching {url}: {e}")
+        return None
+
+# Function to parse HTML content
+def parse_page(html_content):
+    soup = BeautifulSoup(html_content, 'html.parser')
+    return soup
+
+# Function to search for keywords in the content
+def search_keywords(soup, keywords):
+    text = soup.get_text()
+    found_keywords = {
+        keyword: text.lower().count(keyword.lower()) for keyword in keywords
+    }
+    return found_keywords
+
+# Function to extract links from the page
+def extract_links(soup, base_url):
+    links = set()
+    for link in soup.find_all('a', href=True):
+        url = link['href']
+        if url.startswith('http'):
+            links.add(url)
+        elif url.startswith('/'):
+            links.add(requests.compat.urljoin(base_url, url))
+    return links
+
+# Function to display the results
+def display_results(url, found_keywords):
+    print(f"Results for {url}:")
+    for keyword, count in found_keywords.items():
+        print(f"  {keyword}: {count}")
+    print()
+
+# Focused crawler implementation
+def focused_crawler(seed_urls, keywords, max_pages=20):
+    crawled_urls = set()
+    urls_to_crawl = deque(seed_urls)
+
+    while urls_to_crawl and len(crawled_urls) < max_pages:
+        url = urls_to_crawl.popleft()
+        if url in crawled_urls:
+            continue
+
+        html_content = fetch_page(url)
+        if not html_content:
+            continue
+
+        soup = parse_page(html_content)
+        found_keywords = search_keywords(soup, keywords)
+        display_results(url, found_keywords)
+
+        if any(count > 0 for count in found_keywords.values()):
+            new_links = extract_links(soup, url)
+            urls_to_crawl.extend(new_links - crawled_urls)
+
+        crawled_urls.add(url)
+
+# Run the crawler
+focused_crawler(seed_urls, keywords)
+
+---
+
+## Web Data Analytics Practical Number 9
+
+Aim: Sentiment analysis for reviews by customers and visualize the same.
+
+!pip install textblob nltk matplotlib seaborn
+
+import pandas as pd
+import nltk
+from textblob import TextBlob
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Download necessary NLTK data
+nltk.download('punkt')
+
+# Review data
+data = {
+    'review': [
+        "I love this product! It works great.",
+        "This is the worst purchase I have ever made.",
+        "Not bad, but could be better.",
+        "Absolutely fantastic! Highly recommend it.",
+        "Terrible experience, will not buy again.",
+        "Decent quality for the price.",
+        "Exceeded my expectations!",
+        "Would not recommend this to anyone.",
+        "Satisfactory performance overall.",
+        "I'm very happy with my purchase."
+    ]
+}
+
+df = pd.DataFrame(data)
+
+# Function to calculate sentiment polarity
+def get_sentiment(text):
+    blob = TextBlob(text)
+    return blob.sentiment.polarity
+
+df['sentiment'] = df['review'].apply(get_sentiment)
+
+# Plot sentiment distribution
+sns.set_style("whitegrid")
+plt.figure(figsize=(10, 6))
+sns.histplot(df['sentiment'], bins=10, kde=True)
+plt.title('Distribution of Sentiment Scores')
+plt.xlabel('Sentiment Score')
+plt.ylabel('Frequency')
+plt.show()
+
+# Function to categorize sentiment
+def categorize_sentiment(polarity):
+    if polarity > 0:
+        return 'Positive'
+    elif polarity < 0:
+        return 'Negative'
+    else:
+        return 'Neutral'
+
+df['sentiment_category'] = df['sentiment'].apply(categorize_sentiment)
+
+# Plot sentiment category distribution
+plt.figure(figsize=(10, 6))
+sns.countplot(x='sentiment_category', data=df, palette='viridis')
+plt.title('Sentiment Category Distribution')
+plt.xlabel('Sentiment Category')
+plt.ylabel('Frequency')
+plt.show()
+

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Edu-Excel</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="rahul_responsive.css" rel="stylesheet">
+  	<style>
+    .contact .php-email-form button[type=button] {
+        background: #ffc451;
+        border: 0;
+        padding: 10px 24px;
+        color: #151515;
+        transition: 0.4s;
+        border-radius: 4px;
+    }
+    #preloader2 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+        overflow: hidden;
+        background: #151515;
+          display:none;
+    }
+    #preloader2:before {
+        content: "";
+        position: fixed;
+        top: calc(50% - 0px);
+        left: calc(50% - 30px);
+        border: 6px solid #ffc451;
+        border-top-color: #151515;
+        border-bottom-color: #151515;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: animate-preloader 1s linear infinite;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i><img class="logo_image" src="img/logo.png"></i>Edu-Excel</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="aboutus.html" class="nav-item nav-link">About Us</a>
+                <a href="resources.html" class="nav-item nav-link">Resources</a>
+              	<div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Courses</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="igcse.html" class="dropdown-item">IGCSE</a>
+                        <a href="alevels.html" class="dropdown-item">A-LEVELS</a>
+                        <a href="ibdp.html" class="dropdown-item">IBDP</a>
+                        <a href="ibmyp.html" class="dropdown-item">IB-MYP</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Gallery</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="faculty.html" class="dropdown-item">Faculty</a>
+                        <a href="testimonials.html" class="dropdown-item">Testimonials</a>
+                    </div>
+                </div>
+            </div>
+            <a href="contact.html" class="btn btn-primary mobile_enquiry py-4 px-lg-5 d-lg-block active">Enquiry<i
+                    class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 page-header">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-3 text-white animated slideInDown">Contact Us</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Enguiry</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Contact Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Contact Us</h6>
+                <h2 class="mb-5 mobile_heading">Contact For Query</h2>
+            </div>
+
+
+
+
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-lg-8 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+                    <form id="contact_form" action="forms/contactform.php" method="post" novalidate  role="form" class="float needs-validation"
+                        method="POST" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" name="Name" class="form-control" id="name"
+                                        placeholder="Student Full Name" required />
+                                    <label for="name">Student Full Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" name="School" class="form-control" id="school"
+                                        placeholder="School Name" required>
+                                    <label for="school">School Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-floating">
+                                    <input type="email" name="Email" class="form-control" id="email"
+                                        placeholder="Your Email" required>
+                                    <label for="email">Your Email</label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-floating">
+                                    <input type="phone number" name="Phone" class="form-control" id="phone"
+                                        placeholder="Phone Number" required>
+                                    <label for="phone">Phone Number</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" name="Board" class="form-control" id="board" placeholder="Board"
+                                        required>
+                                    <label for="board">Board</label>
+                                </div>
+                            </div>
+                          <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" name="Grade" class="form-control" id="grade" placeholder="Grade"
+                                        required>
+                                    <label for="grade">Grade</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea name="Message" class="form-control" placeholder="Leave a message here"
+                                        id="message" style="height: 150px" required></textarea>
+                                    <label for="message">Message</label>
+                                </div>
+                            </div>
+                          <script src="https://hcaptcha.com/1/api.js" async defer></script>
+                          <div class="h-captcha" data-sitekey="cf62a035-6250-438e-8cd7-e9da5fa1ac56"></div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" id="form_submit" button="submit" type="button">Send
+                                    Message</button>
+                              
+                            </div>
+                          
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="row g-4">
+                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h5>Get In Touch</h5>
+                    <p class="mb-4">We at Edu-Excel aspire to be the best in providing IB and IGCSE coaching and
+                        exceed expectations by providing quality instruction to students that would help them to achieve
+                        their potential for their future success</p>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
+                            style="width: 50px; height: 50px;">
+                          <i><a class="fa fa-map-marker-alt text-white" href="https://maps.app.goo.gl/Pwt8mFh2axtEvA7D6"></a></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">Office</h5>
+                            <p class="mb-0">Old Nagardas Road Andheri East Mumbai-400069</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
+                            style="width: 50px; height: 50px;">
+                          <i><a class="fa fa-phone-alt text-white" href="tel:+91-87791-96771"></a></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">Mobile</h5>
+                            <p class="mb-0">+91 87791 96771</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
+                            style="width: 50px; height: 50px;">
+                          <i><a class="fa fa-envelope-open text-white" href="mailto:edu.excel.internationals@gmail.com"></a></i>
+                      </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">Email</h5>
+                            <p class="mb-0">edu.excel.internationals@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <iframe class="position-relative rounded w-100 h-100"
+                        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d235.62003725006562!2d72.8374920082005!3d19.11113905857795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s201%2C%20Royyal%20Chamber%2C%20Gulmohar%20Road%20No.%201%2C%20Juhu%2C%20Mumbai%20400049!5e0!3m2!1sen!2sin!4v1751540630559!5m2!1sen!2sin"
+                        frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
+                        tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="igcse.html">IGCSE</a>
+                    <a class="btn btn-link" href="alevels.html">A-LEVELS</a>
+                    <a class="btn btn-link" href="ibdp.html">IBDP</a>
+                    <a class="btn btn-link" href="ibmyp.html">IB-MYP</a>
+                    <a class="btn btn-link" href="contact.html">Enquiry</a>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                  <p class="mb-2"><i><a class="fa fa-map-marker-alt me-3" href="https://maps.app.goo.gl/Pwt8mFh2axtEvA7D6"></a></i>201, Royal Chamber, Gulmohar Road No. 1, Juhu, Mumbai 400049</p>
+                  <p class="mb-2"><i><a class="fa fa-phone-alt me-3" href="tel:+91-87791-96771"></a></i>+91 87791 96771</p>
+                  <p class="mb-2"><i><a class="fa fa-envelope me-3" href="mailto:edu.excel.internationals@gmail.com"></a></i>edu.excel.internationals@gmail.com</p>
+
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="index.html" class="navbar-brand d-flex align-items-center footer_logo px-4 px-lg-5">
+                        <h2 class="m-0 text-primary"><i><img class="logo_image" src="img/logo.png"></i>Edu-Excel</h2>
+                    </a><br>
+                    <h4 class="text-white mb-3">Social Media</h4>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://wa.me/+918779196771?text="><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://instagram.com/edu__excel?igshid=NzZhOTFlYzFmZQ=="><i class="fab fa-instagram"></i></a>
+                       <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>-->
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/edu-excel/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+	<div id="preloader2"></div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script>
+        function gotowhatsapp() {
+
+            var name = document.getElementById("name").value;
+            var school = document.getElementById("school").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var board = document.getElementById("board").value;
+            var grade = document.getElementById("grade").value;
+            var message = document.getElementById("message").value;
+
+            var url = "https://wa.me/8779196771?text=" +
+                "Name: " + name + "%0a" +
+                "School: " + school + "%0a" +
+                "Email: " + email + "%0a" +
+                "Phone: " + phone + "%0a" +
+                "Board: " + board + "%0a" +
+                "Grade: " + grade + "%0a" +
+                "Message: " + message;
+
+            window.open(url, '_blank').focus();
+        }
+    </script>
+	<script>
+        $(document).ready(function(){
+          // click on button submit
+          $("#form_submit").on('click', function(){
+            // send ajax
+            $('#preloader2').show();
+            var Name = $("#name").val();
+            var School = $("#school").val();
+            var Email = $("#email").val();
+
+            var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+
+            var Phone = $("#phone").val();
+            var Board = $("#board").val();
+            var Grade = $("#grade").val();
+            var Message = $("#message").val();
+
+            if(Name != '' && School != '' && Email != '' && Phone != '' && Board != '' && Grade != '' && Message != ''){
+              console.log('all ok');
+              $.ajax({
+                url: 'forms/contactform.php', // url where to submit the request
+                type : "POST", // type of action POST || GET
+                dataType : 'json', // data type
+                data : $("#contact_form").serialize(), // post data || get data
+                success : function(result) {
+                  // you can see the result from the console
+                  // tab of the developer tools
+                  console.log(result);
+                  //$("#contact_form")[0].reset();
+                  $('#preloader2').hide();
+                  Toastify({
+                    text: result.message,
+                    duration: 3000,
+                    close: true,
+                    gravity: "top", // `top` or `bottom`
+                    position: "right", // `left`, `center` or `right`
+                    stopOnFocus: true, // Prevents dismissing of toast on hover
+                    style: {
+                      background: "linear-gradient(to right, #00b09b, #96c93d)",
+                    }
+                  }).showToast();
+                },
+                error: function(xhr, resp, text) {
+                  $('#preloader2').hide();
+                }
+              });
+            }else if(Name == ''){
+              $('#preloader2').hide();
+              Toastify({
+                text: "First Name is required",
+                duration: 3000,
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                  background: "linear-gradient(to right, #ff5f6d, #ffc371)",
+                }
+              }).showToast();
+            }else if(School == ''){
+              $('#preloader2').hide();
+              Toastify({
+                text: "Last Name is required",
+                duration: 3000,
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                  background: "linear-gradient(to right, #ff5f6d, #ffc371)",
+                }
+              }).showToast();
+            }else if(Email == '' || !expr.test(Email)){
+              $('#preloader2').hide();
+              Toastify({
+                text: "Email is required or not proper.",
+                duration: 3000,
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                  background: "linear-gradient(to right, #ff5f6d, #ffc371)",
+                }
+              }).showToast();
+            }else if(Phone == ''){
+              $('#preloader2').hide();
+              Toastify({
+                text: "Phone is required",
+                duration: 3000,
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                  background: "linear-gradient(to right, #ff5f6d, #ffc371)",
+                }
+              }).showToast();
+            }else if(Board == ''){
+              $('#preloader2').hide();
+              Toastify({
+                text: "Board is required",
+                duration: 3000,
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                  background: "linear-gradient(to right, #ff5f6d, #ffc371)",
+                }
+              }).showToast();
+            }else if(Grade == ''){
+              $('#preloader2').hide();
+              Toastify({
+                text: "Grade is required",
+                duration: 3000,
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                  background: "linear-gradient(to right, #ff5f6d, #ffc371)",
+                }
+              }).showToast();
+            }else if(Message == ''){
+              $('#preloader2').hide();
+              Toastify({
+                text: "Message is required",
+                duration: 3000,
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                  background: "linear-gradient(to right, #ff5f6d, #ffc371)",
+                }
+              }).showToast();
+            }
+
+
+          });
+        });
+    </script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+Practical-3
+Aim: Configure Trunks between switches and VTP Pruning.
+1. Configure Switch0
+Switch>
+Switch> enable
+Switch# conf t
+Switch(config)# vlan 10
+Switch(config-vlan)# name sales
+Switch(config-vlan)# exit
+Switch(config)# vlan 20
+Switch(config-vlan)# name marketing
+Switch(config-vlan)# exit
+Switch(config)# int f0/1
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport access vlan 10
+Switch(config-if)# exit
+Switch(config)# exit
+2. Configure Switch1
+Switch>
+Switch> enable
+Switch# conf t
+Switch(config)# vlan 10
+Switch(config-vlan)# name sales
+Switch(config-vlan)# exit
+Switch(config)# vlan 20
+Switch(config-vlan)# name marketing
+Switch(config-vlan)# exit
+Switch(config)# int f0/2
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport access vlan 20
+Switch(config-if)# exit
+Switch(config)# exit
+3. Configure Switch0
+Switch#
+Switch# conf t
+Switch(config)# int f0/24
+Switch(config-if)# switchport mode trunk
+Switch(config-if)# exit
+Switch(config)#
+4. Configure Switch1
+Switch#
+Switch# conf t
+Switch(config)# int f0/24
+Switch(config-if)# switchport mode trunk
+Switch(config-if)# exit
+Switch(config)#
+5. Configure Switch0
+Switch(config)#
+Switch(config)# vtp mode server
+Switch(config)# vtp domain LabDomain
+Switch(config)# vtp password LadPassword
+Switch(config)# exit
+Switch#
+6. Configure Switch1
+Switch(config)#
+Switch(config)# vtp mode client
+Switch(config)# vtp domain LabDomain
+Switch(config)# vtp password LabDomain
+Switch(config)# exit
+Switch#
+7. Commands for Switch0
+Switch# show vlan brief
+Switch# show vtp status
+8. Commands for Switch1
+Switch# show vlan brief
+Switch# show vtp status
+9. Configure IP to PC
+a. PC0
+Desktop > IP Configuration > and assign IPv4 = 192.168.10.2
+b. PC1
+Desktop > IP Configuration > and assign IPv4 = 192.168.10.3
+10. Ping PC1 from PC0 and PC0 from PC1 to show the successful connection
+From PC0 > Desktop > Command Promt
+C:/>ping 192.168.10.3
+From PC1 > Desktop > Command Promt
+C:/>ping 192.168.10.2

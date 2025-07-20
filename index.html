@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Edu-Excel</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="rahul_responsive.css" rel="stylesheet">
+
+
+    <meta name="google-site-verification" content="4XA7iS62VpErpFKtKv4rM1IyVZ1-LLH1OD13L4ipjfo" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YPQL75410C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-YPQL75410C');
+    </script>
+
+
+
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <!-- <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i><img class="logo_image" src="img/logo.png"></i>Edu-Excel</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="aboutus.html" class="nav-item nav-link">About Us</a>
+                <a href="resources.html" class="nav-item nav-link">Resources</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Courses</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="igcse.html" class="dropdown-item">IGCSE</a>
+                        <a href="alevels.html" class="dropdown-item">A-LEVELS</a>
+                        <a href="ibdp.html" class="dropdown-item">IBDP</a>
+                        <a href="ibmyp.html" class="dropdown-item">IB-MYP</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Gallery</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="faculty.html" class="dropdown-item">Faculty</a>
+                        <a href="testimonials.html" class="dropdown-item">Testimonials</a>
+                    </div>
+                </div>
+            </div>
+            <a href="contact.html" class="btn btn-primary mobile_enquiry py-4 px-lg-5 d-lg-block">Enquiry<i
+                    class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav> -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary">
+                <i><img class="logo_image" src="img/logo.png" alt="Logo"></i>Edu-Excel
+            </h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="aboutus.html" class="nav-item nav-link">About Us</a>
+                <a href="resources.html" class="nav-item nav-link">Resources</a>
+
+                <!-- Courses Dropdown -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Courses</a>
+                    <div class="dropdown-menu fade-down m-0 p-3" style="min-width: 325px;">
+                        <div class="row">
+                            <!-- National -->
+                            <div class="col-12 col-md-6">
+                                <h6 class="dropdown-header">National</h6>
+                                <a href="icse.html" class="dropdown-item">ICSE</a>
+                                <a href="cbse.html" class="dropdown-item">CBSE</a>
+                                <a href="hsc.html" class="dropdown-item">HSC</a>
+                            </div>
+                            <!-- International -->
+                            <div class="col-12 col-md-6">
+                                <h6 class="dropdown-header">International</h6>
+                                <a href="igcse.html" class="dropdown-item">IGCSE</a>
+                                <a href="alevels.html" class="dropdown-item">AS-A Level</a>
+                                <a href="ibdp.html" class="dropdown-item">IBDP</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Dropdown -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Gallery</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="faculty.html" class="dropdown-item">Faculty</a>
+                        <a href="testimonials.html" class="dropdown-item">Testimonials</a>
+                    </div>
+                </div>
+            </div>
+            <a href="contact.html" class="btn btn-primary mobile_enquiry py-4 px-lg-5 d-lg-block">
+                Enquiry<i class="fa fa-arrow-right ms-3"></i>
+            </a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Carousel Start -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img class="img-fluid d-block w-100" src="img/carousel-1.jpg" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                    style="background: rgba(24, 29, 56, .7);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-sm-10 col-lg-6">
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Hybrid Coaching
+                                </h5>
+                                <h2 class="display-3 text-white animated slideInDown">IGCSE Coaching
+                                </h2>
+                                <p class="fs-5 text-white mb-4 pb-2">International General Certificate of Secondary
+                                    Education - A globally recognized qualification for secondary school students,
+                                    focusing on a wide range of subjects.</p>
+                                <a href="contact.html"
+                                    class="btn btn-light py-md-3 px-md-5 animated slideInRight">Enquiry</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img class="img-fluid d-block w-100" src="img/carousel-2.jpg" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                    style="background: rgba(24, 29, 56, .7);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-sm-10 col-lg-6">
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Hybrid Coaching
+                                </h5>
+                                <h2 class="display-3 text-white animated slideInDown">A-Level Coaching
+                                </h2>
+                                <p class="fs-5 text-white mb-4 pb-2">Advanced Level qualification typically taken by
+                                    students in the UK and internationally, focusing on in-depth study of specific
+                                    subjects, preparing students for university-level education.</p>
+                                <a href="contact.html"
+                                    class="btn btn-light py-md-3 px-md-5 animated slideInRight">Enquiry</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img class="img-fluid d-block w-100" src="img/carousel-3.jpeg" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                    style="background: rgba(24, 29, 56, .7);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-sm-10 col-lg-6">
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Hybrid Coaching
+                                </h5>
+                                <h2 class="display-3 text-white animated slideInDown">IBDP Coaching
+                                </h2>
+                                <p class="fs-5 text-white mb-4 pb-2">IB Diploma Programme A rigorous and
+                                    comprehensive two-year curriculum that prepares students for higher education,
+                                    emphasizing critical thinking and holistic development.</p>
+                                <a href="contact.html"
+                                    class="btn btn-light py-md-3 px-md-5 animated slideInRight">Enquiry</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img class="img-fluid d-block w-100" src="img/carousel-4.jpeg" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                    style="background: rgba(24, 29, 56, .7);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-sm-10 col-lg-6">
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Hybrid Coaching
+                                </h5>
+                                <h2 class="display-3 text-white animated slideInDown">IB-MYP Coaching
+                                </h2>
+                                <p class="fs-5 text-white mb-4 pb-2">Middle Years Programme -A curriculum framework
+                                    designed for students aged 11 to 16, providing a balanced education that encourages
+                                    inquiry, critical thinking, and intercultural understanding.</p>
+                                <a href="contact.html"
+                                    class="btn btn-light py-md-3 px-md-5 animated slideInRight">Enquiry</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+
+
+
+
+    <!-- Carousel End -->
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <a href="#">
+                                <i class="fa fa-3x fa-globe text-primary mb-4"></i>
+                                <h5 class="mb-3">Online Tutoring</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <a href="#">
+                                <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
+                                <h5 class="mb-3">Centre Tutoring</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <a href="#">
+                                <i class="fa fa-3x fa-home text-primary mb-4"></i>
+                                <h5 class="mb-3">Home Tutoring</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <a href="resources.html" target="_blank">
+                                <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
+                                <h5 class="mb-3">Comprehensive Resources</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100" src="img/convocation.jpg" alt=""
+                            style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
+                    <h1 class="mb-4 mobile_heading">Edu-Excel</h1>
+                    <p class="mb-4">Edu-Excel, the leading provider of top-notch IGCSE and A Level tuition classes in
+                        Mumbai, recognizes the significance of international programmes like IB and IGCSE in cultivating
+                        essential skills such as problem solving, critical thinking, creativity, agility, adaptability,
+                        collaboration, and leadership.
+                    </p>
+                    <p class="mb-4"> These skills play a crucial role in enhancing employment and
+                        employability prospects. To ensure the best education for IB and IGCSE in Mumbai, we prioritize
+                        the delivery of quality coaching. With our extensive experience and expertise, Edu-Excel
+                        guarantees that our students receive nothing short of the highest quality education available.
+                    </p>
+                    <div class="row gy-2 gx-4 mb-4">
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Programmes
+                            </p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Highest Quality Education
+                            </p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Experience & Expertise
+                            </p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Quality Coaching</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Home Tutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!--Auto Start-->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="counter autocounter">
+                        <i class="fa fa-2x fa-calendar autofa-2x text-primary"></i>
+                        <h2 class="timer count-title autocount-title count-number" data-to="10" data-speed="3000"></h2>
+                        <p class="count-text autocount-text">Years Of Experience</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="counter autocounter">
+                        <i class="fa fa-2x fa-user-graduate autofa-2x text-primary"></i>
+                        <h2 class="timer count-title autocount-title count-number" data-to="855" data-speed="3000"></h2>
+                        <p class="count-text autocount-text">Number Of Students</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="counter autocounter">
+                        <i class="fa fa-2x fa-chalkboard-teacher autofa-2x text-primary"></i>
+                        <h2 class="timer count-title autocount-title count-number" data-to="32" data-speed="3000"></h2>
+                        <p class="count-text autocount-text">Number of Faculties</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="counter autocounter">
+                        <i class="fa fa-2x fa-chalkboard autofa-2x text-primary"></i>
+                        <h2 class="timer count-title autocount-title count-number" data-to="15565" data-speed="3000">
+                        </h2>
+                        <p class="count-text autocount-text">Number of Lectures</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Auto End-->
+
+    <!-- Test Preparation Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Test Preparation</h6>
+                <h2 class="mb-5 mobile_heading">Tests Preparation</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid test_image" src="img/Entrance Exam/act.jpeg" alt="">
+                        </div>
+
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">ACT</h5>
+                            <small>The ACT (American College Testing) is a standardized college admissions exam
+                                administered in the United States. It assesses high school students' knowledge and
+                                skills in English, mathematics, reading, and science reasoning.</small>
+
+                            <a href="https://www.act.org/" target="_blank"
+                                class="btn btn-primary test_prep_button py-4 px-lg-5 d-block d-lg-block">Find
+                                More<i class="fa fa-arrow-right ms-3"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid test_image" src="img/Entrance Exam/ap.png" alt="">
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">AP</h5>
+                            <small>AP (Advanced Placement) exams are standardized tests administered by the College
+                                Board in the United States. They are taken by high school <br>students who have
+                                completed Advanced Placement courses in various subjects. </small>
+                            <a href="https://apstudents.collegeboard.org/" target="_blank"
+                                class="btn btn-primary test_prep_button py-4 px-lg-5 d-block d-lg-block">Find More<i
+                                    class="fa fa-arrow-right ms-3"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid test_image" src="img/Entrance Exam/jee.png" alt="">
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">JEE</h5>
+                            <small>The JEE (Joint Entrance Examination) is a national-level entrance exam in India that
+                                evaluates students' knowledge and skills in subjects like Physics, Chemistry, and
+                                Mathematics. It consists of two stages: JEE Main and JEE Advanced. </small>
+                            <a href="https://jeemain.nta.nic.in/" target="_blank"
+                                class="btn btn-primary test_prep_button py-4 px-lg-5 d-block d-lg-block">Find More<i
+                                    class="fa fa-arrow-right ms-3"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid test_image" src="img/Entrance Exam/neet.jpeg" alt="">
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">NEET</h5>
+                            <small>The NEET (National Eligibility cum Entrance Test) is a national-level medical
+                                entrance
+                                exam conducted in India. It is the primary exam for students seeking admission for
+                                graduate in MBBS and BDS courses in colleges across the country.</small>
+                            <a href="https://neet.nta.nic.in/" target="_blank"
+                                class="btn btn-primary test_prep_button py-4 px-lg-5 d-block d-lg-block">Find More<i
+                                    class="fa fa-arrow-right ms-3"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid test_image" src="img/Entrance Exam/checkpoint.jpeg" alt="">
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Checkpoint</h5>
+                            <small>The NEET (National Eligibility cum Entrance Test) is a national-level medical
+                                entrance
+                                exam conducted in India. It is the primary exam for students seeking admission for
+                                graduate in MBBS and BDS courses in colleges across the country.</small>
+                            <a href="https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-lower-secondary/assessment/cambridge-checkpoint/"
+                                target="_blank"
+                                class="btn btn-primary test_prep_button py-4 px-lg-5 d-block d-lg-block">Find More<i
+                                    class="fa fa-arrow-right ms-3"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid test_image" src="img/Entrance Exam/imo.png" alt="">
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">IMO & Other Entrances</h5>
+                            <small>The NEET (National Eligibility cum Entrance Test) is a national-level medical
+                                entrance
+                                exam conducted in India. It is the primary exam for students seeking admission for
+                                graduate in MBBS and BDS courses in colleges across the country.</small>
+                            <a href="https://www.imo-official.org/" target="_blank"
+                                class="btn btn-primary test_prep_button py-4 px-lg-5 d-block d-lg-block">Find More<i
+                                    class="fa fa-arrow-right ms-3"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Test Preparation End -->
+
+    <!-- Students Result Start -->
+    <section class="container py-5">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">Latest</h6>
+            <h2 class="mb-5 mobile_heading">Student Achievements</h2>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Student 1 -->
+            <div class="col-md-6">
+                <div class="bg-white border rounded shadow-sm p-4 h-100">
+
+                    <!-- Top Section: Image + Summary -->
+                    <div class="d-flex align-items-start mb-3 pb-3 border-bottom">
+                        <img src="img/Results/Dhyan-Podar.jpg" alt="Dhyan Rajani" class="rounded me-3"
+                            style="width: 120px; height: auto;">
+                        <div>
+                            <h5 class="fw-bold mb-1">Dhyan Rajani</h5>
+                            <p class="mb-1"><strong>Grade:</strong> 10th IGCSE (2025)</p>
+                            <p class="mb-1"><strong>School:</strong> Podar International School, Santacruz</p>
+                            <p class="mb-1"><strong>Subjects:</strong> A* in Add. Math (0606), A* in Int. Math (0607)
+                            </p>
+                            <p class="mb-0"><strong>Achievement:</strong> 8A* + 1A — School Topper</p>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Section: Progress + Quotes -->
+                    <div class="pt-2">
+                        <h6 class="text-muted fw-bold">Before Edu-Excel:</h6>
+                        <ul class="small ps-3 mb-3">
+                            <li>Unsure whether to take up Additional Maths at the start of Grade 10 and needed clarity
+                                on handling the subject’s
+                                demands.</li>
+                            <li>Looked for better strategies to solve complex problems quickly and accurately in exams.
+                            </li>
+                        </ul>
+
+                        <h6 class="text-muted fw-bold">After Edu-Excel:</h6>
+                        <ul class="small ps-3 mb-3">
+                            <li>Edu Excel gave him the confidence that with expert guidance and regular practice, he
+                                could excel—and he did, scoring an
+                                A* in just 6 months.
+                            </li>
+                            <li>Now solves advanced problems with ease and manages his time effectively during exams
+                            </li>
+                        </ul>
+
+                        <hr class="my-2">
+
+                        <p class="fst-italic text-muted mb-1" style="font-size: 0.85rem;">
+                            “I used to dread math. Now, it’s my favorite subject!”
+                        </p>
+                        <p class="text-end text-muted mb-2" style="font-size: 0.8rem;"><strong>– Dhyan Rajani</strong>
+                        </p>
+
+                        <p class="fst-italic text-muted mb-1" style="font-size: 0.85rem;">
+                            “We saw a shift in mindset, not just marks.”
+                        </p>
+                        <p class="text-end text-muted" style="font-size: 0.8rem;"><strong>– Palak Rajani
+                                (Mother)</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Student 2 -->
+            <div class="col-md-6">
+                <div class="bg-white border rounded shadow-sm p-4 h-100">
+                    <!-- Top Section: Image + Summary -->
+                    <div class="d-flex align-items-start mb-3 pb-3 border-bottom">
+                        <img src="img/Results/vivaan k.jpg" alt="Vivaan Khedkar" class="rounded me-3"
+                            style="width: 120px; height: auto;">
+                        <div>
+                            <h5 class="fw-bold mb-1">Vivaan Khedkar</h5>
+                            <p class="mb-1"><strong>Grade:</strong> 10th IGCSE (2025)</p>
+                            <p class="mb-1"><strong>School:</strong> SVKM JV Parekh Intl. School, Mumbai</p>
+                            <p class="mb-1"><strong>Subjects:</strong> A* in Add. Math (0606), A* in Ext. Math (0580)
+                            </p>
+                            <p class="mb-0"><strong>Achievement:</strong> 8A* + 1A — School Topper</p>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Section: Progress + Quotes -->
+                    <div class="pt-2">
+                        <h6 class="text-muted fw-bold">Before Edu-Excel:</h6>
+                        <ul class="small ps-3 mb-3">
+                            <li>Struggled with key concepts in calculus, trigonometry, and graphs</li>
+                            <li>Needed constant help and lacked independence in problem-solving</li>
+                            <li>Falling behind in school assessments</li>
+                        </ul>
+
+                        <h6 class="text-muted fw-bold">After Edu-Excel:</h6>
+                        <ul class="small ps-3 mb-3">
+                            <li>Scored A* in both Add Math & Extended Math</li>
+                            <li>Mastered complex topics through structured guidance</li>
+                            <li>Became school topper with a strong passion for math</li>
+                        </ul>
+
+                        <hr class="my-2">
+
+                        <p class="fst-italic text-muted mb-1" style="font-size: 0.85rem;">
+                            “Before Edu-Excel, I was okay in math. Now, I look forward to solving complex problems every
+                            day. It’s
+                            become my strongest subject.”
+                        </p>
+                        <p class="text-end text-muted mb-2" style="font-size: 0.8rem;"><strong>– Vivaan Khedkar</strong>
+                        </p>
+
+                        <p class="fst-italic text-muted mb-1" style="font-size: 0.85rem;">
+                            “Edu Excel didn’t just boost Vivaan’s grades—it transformed his mindset. From avoiding
+                            homework to
+                            mastering Add Math, we saw a complete shift.”
+                        </p>
+                        <p class="text-end text-muted" style="font-size: 0.8rem;"><strong>– Ruchita Khedkar
+                                (Mother)</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Student 3 -->
+            <div class="col-md-6">
+                <div class="bg-white border rounded shadow-sm p-4 h-100">
+                    <!-- Top Section: Image + Summary -->
+                    <div class="d-flex align-items-start mb-3 pb-3 border-bottom">
+                        <img src="img/Results/Dhruti - SVKM.jpg" alt="Dhruti Sanghai" class="rounded me-3"
+                            style="width: 120px; height: auto;">
+                        <div>
+                            <h5 class="fw-bold mb-1">Dhruti Sanghai</h5>
+                            <p class="mb-1"><strong>Grade:</strong> 10th IGCSE (2025)</p>
+                            <p class="mb-1"><strong>School:</strong> SVKM JV Parekh Intl. School, Vile Parle West</p>
+                            <p class="mb-1"><strong>Subjects:</strong> Physics (0625), Chemistry (0620), Math (0580)</p>
+                            <p class="mb-0"><strong>Achievement:</strong> 7 A★s & 1 A – among school toppers</p>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Section: Progress + Quotes -->
+                    <div class="pt-2">
+                        <h6 class="text-muted fw-bold mb-2">Before Edu-Excel:</h6>
+                        <ul class="small ps-3 mb-3">
+                            <li><strong>Math:</strong> Weak in core concepts – algebra, trigonometry</li>
+                            <li><strong>Math:</strong> Avoided practice due to fear of failure</li>
+                            <li><strong>Physics/Chem:</strong> Relied on memorization, low mock test accuracy</li>
+                        </ul>
+
+                        <h6 class="text-muted fw-bold mb-2">After Edu-Excel:</h6>
+                        <ul class="small ps-3 mb-3">
+                            <li><strong>Math:</strong> Improved to 80%+ in school & coaching tests</li>
+                            <li><strong>Math:</strong> Daily practice with structured mock tests</li>
+                            <li><strong>Sci:</strong> Mastered numerical/application-based questions</li>
+                        </ul>
+
+                        <hr class="my-2">
+
+                        <p class="fst-italic text-muted mb-1" style="font-size: 0.85rem;">
+                            “Physics, Chem and Math used to scare me. But Edu-Excel made it click — all three teachers
+                            explain in a
+                            way that makes even tough topics feel simple and with lot of past papers drill made my A*
+                            possible in
+                            all three major science subjects despite being commerce student.”
+                        </p>
+                        <p class="text-end text-muted mb-2" style="font-size: 0.8rem;"><strong>– Dhruti Sanghai</strong>
+                        </p>
+
+                        <p class="fst-italic text-muted mb-1" style="font-size: 0.85rem;">
+                            “We saw a complete turnaround in just a few months. From struggling to staying afloat to
+                            aiming for top
+                            ranks — thank you, Edu Excel!”
+                        </p>
+                        <p class="text-end text-muted" style="font-size: 0.8rem;"><strong>– Priya Sanghai
+                                (Mother)</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Student 4 -->
+            <div class="col-md-6">
+                <div class="bg-white border rounded shadow-sm p-4 h-100">
+                    <!-- Top Section: Image + Summary -->
+                    <div class="d-flex align-items-start mb-3 pb-3 border-bottom">
+                        <img src="img/Results/Rian - SVKM.jpg" alt="Rian Jain" class="rounded me-3"
+                            style="width: 120px; height: auto;">
+                        <div>
+                            <h5 class="fw-bold mb-1">Rian Jain</h5>
+                            <p class="mb-1"><strong>Grade:</strong> 10th IGCSE (2025)</p>
+                            <p class="mb-1"><strong>School:</strong> SVKM JV Parekh Intl. School, Mumbai</p>
+                            <p class="mb-1"><strong>Subject:</strong> 98/100 in Extended Math (0580)</p>
+                            <p class="mb-0"><strong>Achievement:</strong> Consistent 90%+ and breakthrough board score
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Section: Progress + Quotes -->
+                    <div class="pt-2">
+                        <h6 class="text-muted fw-bold">Before Edu-Excel:</h6>
+                        <ul class="small ps-3 mb-3">
+                            <li>Scored around 55–60% despite effort</li>
+                            <li>Weak problem-solving strategies</li>
+                            <li>Couldn’t finish full papers on time</li>
+                        </ul>
+
+                        <h6 class="text-muted fw-bold">After Edu-Excel:</h6>
+                        <ul class="small ps-3 mb-3">
+                            <li>Strong grasp on core and advanced topics</li>
+                            <li>Scored 98/100 in final boards</li>
+                            <li>Improved speed and accuracy through guided practice</li>
+                        </ul>
+
+                        <hr class="my-2">
+
+                        <p class="fst-italic text-muted mb-1" style="font-size: 0.85rem;">
+                            “Edu Excel helped me believe in myself. I never thought I’d score an A★ in Maths, but the
+                            teachers broke things down
+                            in a way that finally made sense.”
+                        </p>
+                        <p class="text-end text-muted mb-2" style="font-size: 0.8rem;"><strong>– Rian Jain</strong></p>
+
+                        <p class="fst-italic text-muted mb-1" style="font-size: 0.85rem;">
+                            “Their feedback, practice system, and encouragement were key to Rian’s turnaround. We’re
+                            truly grateful.”
+                        </p>
+                        <p class="text-end text-muted" style="font-size: 0.8rem;"><strong>– Reena Jain (Mother)</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Student Result End -->
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
+                <h2 class="mb-5 mobile_heading">Our Students Say!</h2>
+            </div>
+            <div class="owl-carousel testimonial-carousel position-relative">
+
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/Students/Sohar Sharma.jpg"
+                        style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Sohar Sharma</h5>
+                    <p>A-Level RIMS International School and Junior College</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                        <p class="mb-0">Hello I'm Sohar Praskanwa Sharma
+                            Completed Cambridge A-Levels from Royal College Curepipe, Mauritius
+                            Courses : Maths and Physics A LEVEL. They have best experienced faculty</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/Students/guneev baskaran.jpeg"
+                        style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Guneev Baskaran</h5>
+                    <p>A-Level Orchids International School Mumbai</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                        <p class="mb-0">I am guneev Baskaran, I just finished my Cambridge A levels at Legacy School
+                            Bangalore. Ganesh sir taught me various difficult concepts of A level pure math with such
+                            ease despite to me.</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/Students/boy 7.jpg"
+                        style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Veer Sinha</h5>
+                    <p>IBDP International School of Kuala Lumpur Malaysia</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                        <p class="mb-0">This is the first time I have attended a class in this format and wondered how
+                            effective it would be. It was very effective and interested in attending other classes in
+                            the same format.</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/Students/G1.jpg"
+                        style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Tanisha sheety</h5>
+                    <p>IGCSE C.P. Goenka International School</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                        <p class="mb-0">Despite the online component, Edu-Excel fosters a strong sense of community.
+                            I've made great friends and felt connected to my classmates. I suggest other to enroll too.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+
+    <!-- Other Boards -->
+
+    <!-- Parents Review Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="section-title bg-white text-center text-primary px-3">Parents Review</h6>
+                <h2 class="mb-5 mobile_heading">Parents Say!</h2>
+            </div>
+            <div class="owl-carousel testimonial-carousel position-relative">
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/Parents/parents3.jpg"
+                        style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Meghna Sheety</h5>
+                    <p>Tanisha Sheety's Mom</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                        <p class="mb-0">My daughter has been attending Edu Excel classes for the past year, and I
+                            couldn't be more pleased with the results. The dedicated teachers and personalized attention
+                            have truly helped her excel in her studies. Her confidence has soared, and her grades have
+                            improved significantly. I highly recommend Edu Excel for any parent looking to provide a
+                            top-notch education for their child.</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/Parents/Rohini Shetty.jpeg"
+                        style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Rohini Shetty</h5>
+                    <p>Shivani's Mom</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                        <p class="mb-0">My daughter attended a few Physics classes taught by Mr. Ganesh. Thanks to him,
+                            she was able to clear all her doubts in the chapters, and feel much more confident before
+                            writing her board exams. We are grateful for the assistance he provided with explanations,
+                            solving past paper problems and even giving tips and tricks for practical papers which she
+                            has struggled with before.</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/Parents/parents1.jpg"
+                        style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Dipesh Khedkar</h5>
+                    <p>Vivaan Khedkar's Father</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                        <p class="mb-0">Edu Excel goes above and beyond to ensure that my son's educational needs are
+                            met. The teachers are not only knowledgeable but also caring and supportive. They take the
+                            time to understand his strengths and weaknesses and tailor their teaching methods
+                            accordingly. It's a nurturing environment that has fostered his love for learning. The
+                            flexibility in scheduling classes is a significant advantage for us.</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/Parents/parents2.jpg"
+                        style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Mangesh Upadhya</h5>
+                    <p>Dhruv Upadhya's Father</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                        <p class="mb-0">My son started attending Edu Excel classes last year, and the progress he has
+                            made is remarkable. His grades have shot up, and his understanding of complex subjects has
+                            greatly improved. The teachers are exceptional in breaking down difficult concepts into
+                            digestible chunks. They regularly update us on our child's progress and their transparency
+                            has allowed us to ensure our son's success.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Parents Review End -->
+
+    <!-- Other Boards -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Other Boards</h6>
+                <h2 class="mb-5 mobile_heading">Other Boards</h2>
+            </div>
+            <div class="row g-4">
+                <a href="contact.html" class="col-lg-6 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-school text-primary mb-4"></i>
+                            <h2 class="mb-3 other_board">ICSE / CBSE</h2>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="contact.html" class="col-lg-6 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-school text-primary mb-4"></i>
+                            <h2 class="mb-3 other_board">Engg. Courses</h2>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="igcse.html">IGCSE</a>
+                    <a class="btn btn-link" href="alevels.html">A-LEVELS</a>
+                    <a class="btn btn-link" href="ibdp.html">IBDP</a>
+                    <a class="btn btn-link" href="ibmyp.html">IB-MYP</a>
+                    <a class="btn btn-link" href="contact.html">Enquiry</a>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i><a class="fa fa-map-marker-alt me-3"
+                                href="https://maps.app.goo.gl/Pwt8mFh2axtEvA7D6"></a></i>201, Royal Chamber, Gulmohar
+                        Road No. 1, Juhu, Mumbai 400049
+                    </p>
+                    <p class="mb-2"><i><a class="fa fa-phone-alt me-3" href="tel:+91-87791-96771"></a></i>+91 87791
+                        96771</p>
+                    <p class="mb-2"><i><a class="fa fa-envelope me-3"
+                                href="mailto:edu.excel.internationals@gmail.com"></a></i>edu.excel.internationals@gmail.com
+                    </p>
+
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="index.html" class="navbar-brand d-flex align-items-center footer_logo px-4 px-lg-5">
+                        <h2 class="m-0 text-primary"><i><img class="logo_image" src="img/logo.png"></i>Edu-Excel</h2>
+                    </a><br>
+                    <h4 class="text-white mb-3">Social Media</h4>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://wa.me/+918779196771?text="><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social"
+                            href="https://instagram.com/edu__excel?igshid=NzZhOTFlYzFmZQ=="><i
+                                class="fab fa-instagram"></i></a>
+                        <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>-->
+                        <a class="btn btn-outline-light btn-social"
+                            href="https://www.linkedin.com/company/edu-excel/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="contact.html" class="btn btn-lg btn-success btn-lg-square contact-button my-2" title="Contact Us">
+        <i class="bi bi-envelope-fill"></i>
+    </a>
+    <a href="callto:+91 87791 96771" class="btn btn-lg btn-primary btn-lg-square call-button" title="Contact Us">
+        <i class="bi bi-telephone"></i>
+    </a>
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!--Auto Count Script-->
+    <script>
+        (function ($) {
+            $.fn.countTo = function (options) {
+                options = options || {};
+
+                return $(this).each(function () {
+                    // set options for current element
+                    var settings = $.extend({}, $.fn.countTo.defaults, {
+                        from: $(this).data('from'),
+                        to: $(this).data('to'),
+                        speed: $(this).data('speed'),
+                        refreshInterval: $(this).data('refresh-interval'),
+                        decimals: $(this).data('decimals')
+                    }, options);
+
+                    // how many times to update the value, and how much to increment the value on each update
+                    var loops = Math.ceil(settings.speed / settings.refreshInterval),
+                        increment = (settings.to - settings.from) / loops;
+
+                    // references & variables that will change with each update
+                    var self = this,
+                        $self = $(this),
+                        loopCount = 0,
+                        value = settings.from,
+                        data = $self.data('countTo') || {};
+
+                    $self.data('countTo', data);
+
+                    // if an existing interval can be found, clear it first
+                    if (data.interval) {
+                        clearInterval(data.interval);
+                    }
+                    data.interval = setInterval(updateTimer, settings.refreshInterval);
+
+                    // initialize the element with the starting value
+                    render(value);
+
+                    function updateTimer() {
+                        value += increment;
+                        loopCount++;
+
+                        render(value);
+
+                        if (typeof (settings.onUpdate) == 'function') {
+                            settings.onUpdate.call(self, value);
+                        }
+
+                        if (loopCount >= loops) {
+                            // remove the interval
+                            $self.removeData('countTo');
+                            clearInterval(data.interval);
+                            value = settings.to;
+
+                            if (typeof (settings.onComplete) == 'function') {
+                                settings.onComplete.call(self, value);
+                            }
+                        }
+                    }
+
+                    function render(value) {
+                        var formattedValue = settings.formatter.call(self, value, settings);
+                        $self.html(formattedValue);
+                    }
+                });
+            };
+
+            $.fn.countTo.defaults = {
+                from: 0, // the number the element should start at
+                to: 0, // the number the element should end at
+                speed: 1000, // how long it should take to count between the target numbers
+                refreshInterval: 100, // how often the element should be updated
+                decimals: 0, // the number of decimal places to show
+                formatter: formatter, // handler for formatting the value before rendering
+                onUpdate: null, // callback method for every time the element is updated
+                onComplete: null // callback method for when the element finishes updating
+            };
+
+            function formatter(value, settings) {
+                return value.toFixed(settings.decimals);
+            }
+        }(jQuery));
+
+        jQuery(function ($) {
+            // custom formatting example
+            $('.count-number').data('countToOptions', {
+                formatter: function (value, options) {
+                    return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+                }
+            });
+
+            // start all the timers
+            $('.timer').each(count);
+
+            function count(options) {
+                var $this = $(this);
+                options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+                $this.countTo(options);
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var myCarousel = document.querySelector('#carouselExampleIndicators');
+            var carousel = new bootstrap.Carousel(myCarousel, {
+                interval: 100,// Set the time between slides in milliseconds
+                ride: 'carousel'
+            });
+        });
+    </script>
+</body>
+
+</html>

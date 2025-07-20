@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\.edu-excel\.com$ [NC]
+RewriteRule ^(.*)$ https://www.edu-excel.com/$1 [L,R=301]

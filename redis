@@ -1,0 +1,568 @@
+# NoSQL Practicals 
+
+## Practical 1 (Setting up and Exploring MongoDB)
+
+1. Docker Run MongoDB
+
+```
+docker run --name practical-mongo -d mongo:latest
+```
+
+2. List, Create and Use Database
+
+```
+show dbs
+use practical-one
+```
+
+3. Create a collection 
+
+```
+db.createCollection("students")
+show collections
+```
+
+4. Insert Single / Multiple Data 
+
+```
+db.students.insertOne({})
+db.students.insertMany([])
+```
+
+## Practical 2 (Interacting with Redis)
+
+1. Docker Run Redis
+
+```
+docker run --name practical-redis -d redis:latest
+docker exec -it practical-redis redis-cli
+```
+
+2. CRUD Operations
+
+```
+127.0.0.1:6379> SET seat_no "1290032"
+OK
+127.0.0.1:6379> GET seat_no
+"1290032"
+127.0.0.1:6379> LPUSH seat_nos "1290032" "1290031" "1290030"
+(integer) 6
+127.0.0.1:6379> LRANGE seat_nos 0 -1
+1) "1290030"
+2) "1290031"
+3) "1290032"
+4) "1290030"
+5) "1290031"
+6) "1290032"
+127.0.0.1:6379> SADD seat_nos 1 1 1 1 1 2 2 2 2 3 3 3 3
+(error) WRONGTYPE Operation against a key holding the wrong kind of value
+127.0.0.1:6379> SADD set_no 1 1 1 1 1 2 2 2 2 3 3 3 3
+(integer) 3
+127.0.0.1:6379> SMEMBERS set_no
+1) "1"
+2) "2"
+3) "3"
+127.0.0.1:6379> EXISTS seat_no
+(integer) 1
+127.0.0.1:6379> SET number 10
+OK
+127.0.0.1:6379> INCR number
+(integer) 11
+127.0.0.1:6379> GET number
+"11"
+127.0.0.1:6379> DECR number
+(integer) 10
+127.0.0.1:6379> GET number
+"10"
+127.0.0.1:6379> EXPIRE number 10
+(integer) 1
+127.0.0.1:6379> EXISTS number
+(integer) 0
+127.0.0.1:6379> 
+```
+
+
+## Practical 3 (HBase)
+
+docker run --name practical-hbase -d dajobe/hbase
+8993a89ab1f3d50ff34f764e70ef55cc5faf1dcdf73fe3fa3d5bc346e20dd65a
+docker exec -it practical-hbase hbase shell
+2025-01-29 18:22:37,894 WARN  [main] util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+HBase Shell
+Use "help" to get list of supported commands.
+Use "exit" to quit this interactive shell.
+For Reference, please visit: http://hbase.apache.org/2.0/book.html#shell
+Version 2.1.2, r1dfc418f77801fbfb59a125756891b9100c1fc6d, Sun Dec 30 21:45:09 PST 2018
+Took 0.0060 seconds
+hbase(main):001:0> create 'students', 'info'
+Created table students
+Took 1.6292 seconds
+=> Hbase::Table - students
+hbase(main):002:0> put 'students', '1290032', 'info:name', 'Subhashish Nabajja'
+Took 0.2916 seconds
+hbase(main):003:0> put 'students', '1290009', 'info:name', 'Keshav Mishra'
+Took 0.0137 seconds
+hbase(main):004:0> get 'students', '1290032'
+COLUMN                          CELL
+ info:name                      timestamp=1738175060137, value=Subhashish Nabajja
+1 row(s)
+Took 0.1158 seconds
+hbase(main):005:0> scan 'students'
+ROW                             COLUMN+CELL
+ 1290009                        column=info:name, timestamp=1738175086725, value=Keshav Mishra
+ 1290032                        column=info:name, timestamp=1738175060137, value=Subhashish Nabajja
+2 row(s)
+Took 0.0346 seconds
+hbase(main):006:0> put 'students', '1290032', 'info:yob', 2003
+Took 0.0111 seconds
+hbase(main):007:0> put 'students', '1290009', 'info:yob', 2002
+Took 0.0127 seconds
+hbase(main):008:0> scan 'students'
+ROW                             COLUMN+CELL
+ 1290009                        column=info:name, timestamp=1738175086725, value=Keshav Mishra
+ 1290009                        column=info:yob, timestamp=1738175189255, value=2002
+ 1290032                        column=info:name, timestamp=1738175060137, value=Subhashish Nabajja
+ 1290032                        column=info:yob, timestamp=1738175161478, value=2003
+2 row(s)
+Took 0.0292 seconds
+hbase(main):009:0> delete 'students', '1290009', 'info:yob'
+Took 0.0159 seconds
+hbase(main):010:0> scan 'students'
+ROW                             COLUMN+CELL
+ 1290009                        column=info:name, timestamp=1738175086725, value=Keshav Mishra
+ 1290032                        column=info:name, timestamp=1738175060137, value=Subhashish Nabajja
+ 1290032                        column=info:yob, timestamp=1738175161478, value=2003
+2 row(s)
+Took 0.0299 seconds
+hbase(main):011:0> delete 'students', '1290009'
+
+ERROR: wrong number of arguments (2 for 3)
+
+For usage try 'help "delete"'
+
+Took 0.0264 seconds
+hbase(main):012:0> deleteall 'students', '1290009'
+Took 0.0109 seconds
+hbase(main):013:0> scan 'students'
+ROW                             COLUMN+CELL
+ 1290032                        column=info:name, timestamp=1738175060137, value=Subhashish Nabajja
+ 1290032                        column=info:yob, timestamp=1738175161478, value=2003
+1 row(s)
+Took 0.0244 seconds
+hbase(main):014:0> disable 'students'
+Took 0.8416 seconds
+hbase(main):015:0> drop 'students'
+Took 0.5233 seconds
+hbase(main):016:0>
+
+## Practical 4 (Cassandra)
+
+
+`cqlsh`
+
+Here are **Cassandra CRUD operations** using **CQL (Cassandra Query Language):**
+
+---
+
+## **1. Create a Keyspace**
+```sql
+CREATE KEYSPACE mykeyspace 
+WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
+```
+- **Keyspace**: `mykeyspace`
+- **Replication Factor**: 1 (for a single-node setup)
+
+---
+
+## **2. Use the Keyspace**
+```sql
+USE mykeyspace;
+```
+
+---
+
+## **3. Create a Table**
+```sql
+CREATE TABLE users (
+    id UUID PRIMARY KEY,
+    name TEXT,
+    age INT
+);
+```
+- **Table Name**: `users`
+- **Primary Key**: `id` (UUID)
+
+---
+
+## **4. Insert Data**
+```sql
+INSERT INTO users (id, name, age) VALUES (uuid(), 'Alice', 25);
+INSERT INTO users (id, name, age) VALUES (uuid(), 'Bob', 30);
+```
+- `uuid()` generates a **unique identifier**.
+
+---
+
+## **5. Read Data**
+```sql
+SELECT * FROM users;
+```
+- Fetches **all rows**.
+
+```sql
+SELECT name, age FROM users WHERE id = <UUID_VALUE>;
+```
+- Fetches **specific row**.
+
+---
+
+## **6. Update Data**
+```sql
+UPDATE users SET age = 26 WHERE id = <UUID_VALUE>;
+```
+- Updates **age** for a specific `id`.
+
+---
+
+## **7. Delete Data**
+```sql
+DELETE FROM users WHERE id = <UUID_VALUE>;
+```
+- Deletes a row.
+
+```sql
+TRUNCATE users;
+```
+- Deletes **all rows**.
+
+---
+
+## **8. Drop Table**
+```sql
+DROP TABLE users;
+```
+
+## **9. Drop Keyspace**
+```sql
+DROP KEYSPACE mykeyspace;
+```
+
+---
+
+Let me know if you need **Cassandra with Java** examples! 🚀
+
+
+## Practical 7 
+
+ db.employee.find({age: { $gt: 30 }}).hint({age: 1}).explain("executionStats")
+{
+  explainVersion: '1',
+  queryPlanner: {
+    namespace: 'practical-7.employee',
+    parsedQuery: { age: { '$gt': 30 } },
+    indexFilterSet: false,
+    planCacheShapeHash: 'CCB4CABA',
+    planCacheKey: 'D1E702AB',
+    optimizationTimeMillis: 0,
+    maxIndexedOrSolutionsReached: false,
+    maxIndexedAndSolutionsReached: false,
+    maxScansToExplodeReached: false,
+    prunedSimilarIndexes: false,
+    winningPlan: {
+      isCached: false,
+      stage: 'FETCH',
+      inputStage: {
+        stage: 'IXSCAN',
+        keyPattern: { age: 1 },
+        indexName: 'age_1',
+        isMultiKey: false,
+        multiKeyPaths: { age: [] },
+        isUnique: false,
+        isSparse: false,
+        isPartial: false,
+        indexVersion: 2,
+        direction: 'forward',
+        indexBounds: { age: [ '(30, inf.0]' ] }
+      }
+    },
+    rejectedPlans: []
+  },
+  executionStats: {
+    executionSuccess: true,
+    nReturned: 7,
+    executionTimeMillis: 2,
+    totalKeysExamined: 7,
+    totalDocsExamined: 7,
+    executionStages: {
+      isCached: false,
+      stage: 'FETCH',
+      nReturned: 7,
+      executionTimeMillisEstimate: 0,
+      works: 8,
+      advanced: 7,
+      needTime: 0,
+      needYield: 0,
+      saveState: 0,
+      restoreState: 0,
+      isEOF: 1,
+      docsExamined: 7,
+      alreadyHasObj: 0,
+      inputStage: {
+        stage: 'IXSCAN',
+        nReturned: 7,
+        executionTimeMillisEstimate: 0,
+        works: 8,
+        advanced: 7,
+        needTime: 0,
+        needYield: 0,
+        saveState: 0,
+        restoreState: 0,
+        isEOF: 1,
+        keyPattern: { age: 1 },
+        indexName: 'age_1',
+        isMultiKey: false,
+        multiKeyPaths: { age: [] },
+        isUnique: false,
+        isSparse: false,
+        isPartial: false,
+        indexVersion: 2,
+        direction: 'forward',
+        indexBounds: { age: [ '(30, inf.0]' ] },
+        keysExamined: 7,
+        seeks: 1,
+        dupsTested: 0,
+        dupsDropped: 0
+      }
+    }
+  },
+  queryShapeHash: '6428178284C961B6FA666ABEE86C47C442C198102B2ED9CC085393E16825526B',
+  command: {
+    find: 'employee',
+    filter: { age: { '$gt': 30 } },
+    hint: { age: 1 },
+    '$db': 'practical-7'
+  },
+  serverInfo: {
+    host: '7b9e993b9154',
+    port: 27017,
+    version: '8.0.4',
+    gitVersion: 'bc35ab4305d9920d9d0491c1c9ef9b72383d31f9'
+  },
+  serverParameters: {
+    internalQueryFacetBufferSizeBytes: 104857600,
+    internalQueryFacetMaxOutputDocSizeBytes: 104857600,
+    internalLookupStageIntermediateDocumentMaxSizeBytes: 104857600,
+    internalDocumentSourceGroupMaxMemoryBytes: 104857600,
+    internalQueryMaxBlockingSortMemoryUsageBytes: 104857600,
+    internalQueryProhibitBlockingMergeOnMongoS: 0,
+    internalQueryMaxAddToSetBytes: 104857600,
+    internalDocumentSourceSetWindowFieldsMaxMemoryBytes: 104857600,
+    internalQueryFrameworkControl: 'trySbeRestricted',
+    internalQueryPlannerIgnoreIndexWithCollationForRegex: 1
+  },
+  ok: 1
+}
+practical-7> db.employee.find({age: { $gt: 30 }}).explain("executionStats")
+{
+  explainVersion: '1',
+  queryPlanner: {
+    namespace: 'practical-7.employee',
+    parsedQuery: { age: { '$gt': 30 } },
+    indexFilterSet: false,
+    planCacheShapeHash: 'CCB4CABA',
+    planCacheKey: 'D1E702AB',
+    optimizationTimeMillis: 0,
+    maxIndexedOrSolutionsReached: false,
+    maxIndexedAndSolutionsReached: false,
+    maxScansToExplodeReached: false,
+    prunedSimilarIndexes: false,
+    winningPlan: {
+      isCached: false,
+      stage: 'FETCH',
+      inputStage: {
+        stage: 'IXSCAN',
+        keyPattern: { age: 1 },
+        indexName: 'age_1',
+        isMultiKey: false,
+        multiKeyPaths: { age: [] },
+        isUnique: false,
+        isSparse: false,
+        isPartial: false,
+        indexVersion: 2,
+        direction: 'forward',
+        indexBounds: { age: [ '(30, inf.0]' ] }
+      }
+    },
+    rejectedPlans: []
+  },
+  executionStats: {
+    executionSuccess: true,
+    nReturned: 7,
+    executionTimeMillis: 8,
+    totalKeysExamined: 7,
+    totalDocsExamined: 7,
+    executionStages: {
+      isCached: false,
+      stage: 'FETCH',
+      nReturned: 7,
+      executionTimeMillisEstimate: 0,
+      works: 8,
+      advanced: 7,
+      needTime: 0,
+      needYield: 0,
+      saveState: 0,
+      restoreState: 0,
+      isEOF: 1,
+      docsExamined: 7,
+      alreadyHasObj: 0,
+      inputStage: {
+        stage: 'IXSCAN',
+        nReturned: 7,
+        executionTimeMillisEstimate: 0,
+        works: 8,
+        advanced: 7,
+        needTime: 0,
+        needYield: 0,
+        saveState: 0,
+        restoreState: 0,
+        isEOF: 1,
+        keyPattern: { age: 1 },
+        indexName: 'age_1',
+        isMultiKey: false,
+        multiKeyPaths: { age: [] },
+        isUnique: false,
+        isSparse: false,
+        isPartial: false,
+        indexVersion: 2,
+        direction: 'forward',
+        indexBounds: { age: [ '(30, inf.0]' ] },
+        keysExamined: 7,
+        seeks: 1,
+        dupsTested: 0,
+        dupsDropped: 0
+      }
+    }
+  },
+  queryShapeHash: '6428178284C961B6FA666ABEE86C47C442C198102B2ED9CC085393E16825526B',
+  command: {
+    find: 'employee',
+    filter: { age: { '$gt': 30 } },
+    '$db': 'practical-7'
+  },
+  serverInfo: {
+    host: '7b9e993b9154',
+    port: 27017,
+    version: '8.0.4',
+    gitVersion: 'bc35ab4305d9920d9d0491c1c9ef9b72383d31f9'
+  },
+  serverParameters: {
+    internalQueryFacetBufferSizeBytes: 104857600,
+    internalQueryFacetMaxOutputDocSizeBytes: 104857600,
+    internalLookupStageIntermediateDocumentMaxSizeBytes: 104857600,
+    internalDocumentSourceGroupMaxMemoryBytes: 104857600,
+    internalQueryMaxBlockingSortMemoryUsageBytes: 104857600,
+    internalQueryProhibitBlockingMergeOnMongoS: 0,
+    internalQueryMaxAddToSetBytes: 104857600,
+    internalDocumentSourceSetWindowFieldsMaxMemoryBytes: 104857600,
+    internalQueryFrameworkControl: 'trySbeRestricted',
+    internalQueryPlannerIgnoreIndexWithCollationForRegex: 1
+  },
+  ok: 1
+}
+
+
+## Practical 8 (Interacting with Redis Cache)
+
+import redis
+import redis.client
+
+redis_client = redis.StrictRedis(host="localhost", port=6379)
+
+
+def get_data_from_database(data_id):
+    database = {
+        "1290009": "Keshav Mishra",
+        "1290032": "Subashish Nabajja"
+    }
+
+    return database.get(data_id, None)
+
+
+def get_data_from_db_or_cache(data_id):
+    cached_data = redis_client.get(data_id)
+
+    if cached_data:
+        print("Retrieved from cache")
+        return cached_data.decode("utf-8")
+
+    print("Retrieved from database")
+    data = get_data_from_database(data_id)
+
+    redis_client.set(data_id, data)
+
+    return data
+
+
+redis_client.get()
+redis_client.exists()
+redis_client.set()
+redis_client.delete()
+
+get_data_from_db_or_cache("1290009")
+get_data_from_db_or_cache("1290009")
+get_data_from_db_or_cache("1290032")
+get_data_from_db_or_cache("1290032")
+
+
+
+
+
+//Mongodb
+
+use myDatabase
+
+db.users.insertOne({
+    "name": "John Doe",
+    "email": "john@example.com",
+    "age": 30
+})
+
+db.users.insertMany([
+    { "name": "Alice", "email": "alice@example.com", "age": 25 },
+    { "name": "Bob", "email": "bob@example.com", "age": 28 }
+])
+
+
+# Find all documents
+db.users.find()
+
+# Find one document
+db.users.findOne()
+
+# Find with condition
+db.users.find({ "age": { $gt: 25 } })
+
+# Find with projection (return only name and email)
+db.users.find({}, { "name": 1, "email": 1, "_id": 0 })
+
+
+
+
+# Update one document
+db.users.updateOne(
+    { "name": "John Doe" },
+    { $set: { "age": 35 } }
+)
+
+# Update multiple documents
+db.users.updateMany(
+    { "age": { $lt: 30 } },
+    { $set: { "status": "young" } }
+)
+
+
+# Delete one document
+db.users.deleteOne({ "name": "Alice" })
+
+# Delete multiple documents
+db.users.deleteMany({ "age": { $lt: 30 } })

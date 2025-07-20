@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Edu-Excel</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="rahul_responsive.css" rel="stylesheet">
+
+
+    <meta name="google-site-verification" content="4XA7iS62VpErpFKtKv4rM1IyVZ1-LLH1OD13L4ipjfo" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YPQL75410C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-YPQL75410C');
+    </script>
+
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <!-- <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i><img class="logo_image" src="img/logo.png"></i>Edu-Excel</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="aboutus.html" class="nav-item nav-link active">About Us</a>
+                <a href="resources.html" class="nav-item nav-link">Resources</a>
+              	<div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Courses</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="igcse.html" class="dropdown-item">IGCSE</a>
+                        <a href="alevels.html" class="dropdown-item">A-LEVELS</a>
+                        <a href="ibdp.html" class="dropdown-item">IBDP</a>
+                        <a href="ibmyp.html" class="dropdown-item">IB-MYP</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Gallery</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="faculty.html" class="dropdown-item">Faculty</a>
+                        <a href="testimonials.html" class="dropdown-item">Testimonials</a>
+                    </div>
+                </div>
+            </div>
+            <a href="contact.html" class="btn btn-primary mobile_enquiry py-4 px-lg-5 d-lg-block">Enquiry<i
+                    class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav> -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary">
+                <i><img class="logo_image" src="img/logo.png" alt="Logo"></i>Edu-Excel
+            </h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="aboutus.html" class="nav-item nav-link active">About Us</a>
+                <a href="resources.html" class="nav-item nav-link">Resources</a>
+
+                <!-- Courses Dropdown -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Courses</a>
+                    <div class="dropdown-menu fade-down m-0 p-3" style="min-width: 325px;">
+                        <div class="row">
+                            <!-- National -->
+                            <div class="col-12 col-md-6">
+                                <h6 class="dropdown-header">National</h6>
+                                <a href="icse.html" class="dropdown-item">ICSE</a>
+                                <a href="cbse.html" class="dropdown-item">CBSE</a>
+                                <a href="hsc.html" class="dropdown-item">HSC</a>
+                            </div>
+                            <!-- International -->
+                            <div class="col-12 col-md-6">
+                                <h6 class="dropdown-header">International</h6>
+                                <a href="igcse.html" class="dropdown-item">IGCSE</a>
+                                <a href="alevels.html" class="dropdown-item">AS-A Level</a>
+                                <a href="ibdp.html" class="dropdown-item">IBDP</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Dropdown -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Gallery</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="faculty.html" class="dropdown-item">Faculty</a>
+                        <a href="testimonials.html" class="dropdown-item">Testimonials</a>
+                    </div>
+                </div>
+            </div>
+            <a href="contact.html" class="btn btn-primary mobile_enquiry py-4 px-lg-5 d-lg-block">
+                Enquiry<i class="fa fa-arrow-right ms-3"></i>
+            </a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- About Start -->
+    <div class="container-xxl">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100" src="img/convocation.jpg" alt=""
+                            style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
+                    <h2 class="mb-3 mobile_heading">Edu-Excel's Vision:</h2>
+                    <p class="mb-4">Our vision for mentoring is to create a dynamic learning environment that inspires
+                        students to become compassionate, principled, and open-minded global citizens. Through a
+                        rigorous and inquiry-based approach, we are motivated to cultivate intellectual curiosity,
+                        creativity, and resilience. Our highly qualified , dedicated educators are committed to guiding
+                        students on their journey to academic success and personal growth, preparing them to thrive in
+                        an ever-changing world
+                        Our aim is not only to nurture curious minds, foster critical thinking skills but also instil a
+                        lifelong love for learning. By providing personalised attention and comprehensive support, we
+                        aspire to empower students to excel in their exams and beyond.
+                    </p>
+                    <h2 class="mb-3 mobile_heading">Edu-Excel's Mision:</h2>
+                    <p class="mb-2">Our mission is to cultivate a learning environment that fosters academic excellence,
+                        critical thinking, and personal growth. Through rigorous instruction and tailored support, we
+                        empower students to achieve their highest potential..
+
+                    </p>
+                    <div class="row gy-2 gx-4 mb-4">
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Holistic Approach</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Experienced Educators</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Supportive Learning
+                                Environment</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Continuous Feedback</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Focus on Personal Growth
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!--Auto Start-->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="counter autocounter">
+                        <i class="fa fa-2x fa-calendar autofa-2x text-primary"></i>
+                        <h2 class="timer count-title autocount-title count-number" data-to="10" data-speed="3000"></h2>
+                        <p class="count-text autocount-text">Years Of Experience</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="counter autocounter">
+                        <i class="fa fa-2x fa-user-graduate autofa-2x text-primary"></i>
+                        <h2 class="timer count-title autocount-title count-number" data-to="855" data-speed="3000"></h2>
+                        <p class="count-text autocount-text">Number Of Students</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="counter autocounter">
+                        <i class="fa fa-2x fa-chalkboard-teacher autofa-2x text-primary"></i>
+                        <h2 class="timer count-title autocount-title count-number" data-to="32" data-speed="3000"></h2>
+                        <p class="count-text autocount-text">Number of Faculties</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="counter autocounter">
+                        <i class="fa fa-2x fa-chalkboard autofa-2x text-primary"></i>
+                        <h2 class="timer count-title autocount-title count-number" data-to="1565" data-speed="3000">
+                        </h2>
+                        <p class="count-text autocount-text">Number of Lectures</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Auto End-->
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
+                <h1 class="mb-5 mobile_heading">Expert Instructors</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/Teachers/Rajni Verma.jpeg" alt="">
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Rajni Verma</h5>
+                            <small>MA Hindi(1981) B.Ed(1988)</small>
+                            <h6>35+ Years of teaching with a reputed school in mumbai</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/Teachers/ganeshsir.jpeg" alt="">
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Ganesh Gupta</h5>
+                            <small>M.Sc&nbsp;Physics,&nbsp;GATE,&nbsp;SET,&nbsp;BARC,&nbsp;ISRO</small>
+                            <h6>10+ Years Experience Physics Specialist</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/Teachers/virendrasir.jpeg" alt="">
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Virendra</h5>
+                            <small>BE - GATE, SET</small>
+                            <h6>5+ Years Experience Maths Specialist</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/Teachers/prasadsir.jpeg" alt="">
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Prasad Ghadi</h5>
+                            <small>M.Sc Chemistry, GATE, SET</small>
+                            <h6>5+ Years Experience Chemistry Specialist</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="igcse.html">IGCSE</a>
+                    <a class="btn btn-link" href="alevels.html">A-LEVELS</a>
+                    <a class="btn btn-link" href="ibdp.html">IBDP</a>
+                    <a class="btn btn-link" href="ibmyp.html">IB-MYP</a>
+                    <a class="btn btn-link" href="contact.html">Enquiry</a>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i><a class="fa fa-map-marker-alt me-3"
+                                href="https://maps.app.goo.gl/Pwt8mFh2axtEvA7D6"></a></i>Old Nagardas Road, Andheri East
+                    </p>
+                    <p class="mb-2"><i><a class="fa fa-phone-alt me-3" href="tel:+91-87791-96771"></a></i>+91 87791
+                        96771</p>
+                    <p class="mb-2"><i><a class="fa fa-envelope me-3"
+                                href="mailto:edu.excel.internationals@gmail.com"></a></i>edu.excel.internationals@gmail.com
+                    </p>
+
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="index.html" class="navbar-brand d-flex align-items-center footer_logo px-4 px-lg-5">
+                        <h2 class="m-0 text-primary"><i><img class="logo_image" src="img/logo.png"></i>Edu-Excel</h2>
+                    </a><br>
+                    <h4 class="text-white mb-3">Social Media</h4>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://wa.me/+918779196771?text="><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social"
+                            href="https://instagram.com/edu__excel?igshid=NzZhOTFlYzFmZQ=="><i
+                                class="fab fa-instagram"></i></a>
+                        <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>-->
+                        <a class="btn btn-outline-light btn-social"
+                            href="https://www.linkedin.com/company/edu-excel/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!--Auto Count Script-->
+    <script>
+        (function ($) {
+            $.fn.countTo = function (options) {
+                options = options || {};
+
+                return $(this).each(function () {
+                    // set options for current element
+                    var settings = $.extend({}, $.fn.countTo.defaults, {
+                        from: $(this).data('from'),
+                        to: $(this).data('to'),
+                        speed: $(this).data('speed'),
+                        refreshInterval: $(this).data('refresh-interval'),
+                        decimals: $(this).data('decimals')
+                    }, options);
+
+                    // how many times to update the value, and how much to increment the value on each update
+                    var loops = Math.ceil(settings.speed / settings.refreshInterval),
+                        increment = (settings.to - settings.from) / loops;
+
+                    // references & variables that will change with each update
+                    var self = this,
+                        $self = $(this),
+                        loopCount = 0,
+                        value = settings.from,
+                        data = $self.data('countTo') || {};
+
+                    $self.data('countTo', data);
+
+                    // if an existing interval can be found, clear it first
+                    if (data.interval) {
+                        clearInterval(data.interval);
+                    }
+                    data.interval = setInterval(updateTimer, settings.refreshInterval);
+
+                    // initialize the element with the starting value
+                    render(value);
+
+                    function updateTimer() {
+                        value += increment;
+                        loopCount++;
+
+                        render(value);
+
+                        if (typeof (settings.onUpdate) == 'function') {
+                            settings.onUpdate.call(self, value);
+                        }
+
+                        if (loopCount >= loops) {
+                            // remove the interval
+                            $self.removeData('countTo');
+                            clearInterval(data.interval);
+                            value = settings.to;
+
+                            if (typeof (settings.onComplete) == 'function') {
+                                settings.onComplete.call(self, value);
+                            }
+                        }
+                    }
+
+                    function render(value) {
+                        var formattedValue = settings.formatter.call(self, value, settings);
+                        $self.html(formattedValue);
+                    }
+                });
+            };
+
+            $.fn.countTo.defaults = {
+                from: 0,               // the number the element should start at
+                to: 0,                 // the number the element should end at
+                speed: 1000,           // how long it should take to count between the target numbers
+                refreshInterval: 100,  // how often the element should be updated
+                decimals: 0,           // the number of decimal places to show
+                formatter: formatter,  // handler for formatting the value before rendering
+                onUpdate: null,        // callback method for every time the element is updated
+                onComplete: null       // callback method for when the element finishes updating
+            };
+
+            function formatter(value, settings) {
+                return value.toFixed(settings.decimals);
+            }
+        }(jQuery));
+
+        jQuery(function ($) {
+            // custom formatting example
+            $('.count-number').data('countToOptions', {
+                formatter: function (value, options) {
+                    return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+                }
+            });
+
+            // start all the timers
+            $('.timer').each(count);
+
+            function count(options) {
+                var $this = $(this);
+                options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+                $this.countTo(options);
+            }
+        });
+    </script>
+</body>
+
+</html>
