@@ -2,67 +2,32 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Edu-Excel</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Get top-rated IGCSE tutors for Maths, Science & English. Online IGCSE tuition and home tutors near you. Personalised academic support.">
+    <title>Expert IGCSE Tutors | Online, Home & Tuition Near You
+    </title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
     <!-- Favicon -->
     <link href="img/logo.png" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="css/courses.bootstrap.min.css">
+    <link rel="stylesheet" href="css/courses.css">
+    <link rel="stylesheet" href="css/courses-default.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="rahul_responsive.css" rel="stylesheet">
-  
-
-  
-  	<meta name="google-site-verification" content="4XA7iS62VpErpFKtKv4rM1IyVZ1-LLH1OD13L4ipjfo" />
-  	<!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YPQL75410C"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-YPQL75410C');
-  	</script>
-  
 </head>
 
 <body>
-    <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
-    <!-- Spinner End -->
-
-
-    <!-- Navbar Start -->
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><i><img class="logo_image" src="img/logo.png"></i>Edu-Excel</h2>
+            <h2 class="m-0 text-primary">
+                <i><img class="logo_image" src="img/logo.png" alt="Logo"></i>Edu-Excel
+            </h2>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -72,15 +37,33 @@
                 <a href="index.html" class="nav-item nav-link">Home</a>
                 <a href="aboutus.html" class="nav-item nav-link">About Us</a>
                 <a href="resources.html" class="nav-item nav-link">Resources</a>
-              	<div class="nav-item dropdown">
+
+                <!-- Courses Dropdown -->
+                <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Courses</a>
-                    <div class="dropdown-menu fade-down m-0">
-                        <a href="igcse.html" class="dropdown-item active">IGCSE</a>
-                        <a href="alevels.html" class="dropdown-item">A-LEVELS</a>
-                        <a href="ibdp.html" class="dropdown-item">IBDP</a>
-                        <a href="ibmyp.html" class="dropdown-item">IB-MYP</a>
+                    <div class="dropdown-menu fade-down m-0 p-3" style="min-width: 325px;">
+                        <div class="row">
+                            <!-- National -->
+                            <div class="col-12 col-md-6">
+                                <h6 class="dropdown-header">National</h6>
+                                <a href="icse.html" class="dropdown-item">ICSE</a>
+                                <a href="cbse.html" class="dropdown-item">CBSE</a>
+                                <a href="hsc.html" class="dropdown-item">HSC</a>
+                                <a href="competitive-exams.html" class="dropdown-item">Competitive Exam <br>(JEE, NEET,
+                                    MHT-CET)</a>
+                            </div>
+                            <!-- International -->
+                            <div class="col-12 col-md-6">
+                                <h6 class="dropdown-header">International</h6>
+                                <a href="igcse.html" class="dropdown-item">IGCSE</a>
+                                <a href="as-level.html" class="dropdown-item">AS-A Level</a>
+                                <a href="ibdp.html" class="dropdown-item">IBDP</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Gallery Dropdown -->
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Gallery</a>
                     <div class="dropdown-menu fade-down m-0">
@@ -89,303 +72,413 @@
                     </div>
                 </div>
             </div>
-            <a href="contact.html" class="btn btn-primary mobile_enquiry py-4 px-lg-5 d-lg-block">Enquiry<i
-                    class="fa fa-arrow-right ms-3"></i></a>
+            <a href="contact.html" class="btn btn-primary mobile_enquiry py-4 px-lg-5 d-lg-block no-border-radius">
+                Enquiry<i class="fa fa-arrow-right ms-3"></i>
+            </a>
         </div>
     </nav>
-    <!-- Navbar End -->
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1>Find the Best IGCSE Tutors: Online, Home & Nearby</h1>
+                    <p>The International General Certificate of Secondary Education (IGCSE) is a globally recognized
+                        qualification that requires in-depth understanding and strategic preparation. Whether you're
+                        preparing for Cambridge or Edexcel IGCSE, the guidance of an expert tutor can significantly
+                        enhance academic performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Header Start -->
-    <div class="container-fluid bg-primary py-5 mb-5 page-header">
-        <div class="container py-5">
+    <!-- Why IGCSE Tutor Section -->
+    <section id="why" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Why Choose an IGCSE Tutor for Academic Success?</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <p>The IGCSE curriculum is detailed, subject-intensive, and requires conceptual clarity. Many
+                        students benefit from personalized learning support to manage coursework, internal assessments,
+                        and exam preparation.</p>
+                    <h5 class="mt-4">Key Benefits of Hiring an IGCSE Tutor:</h5>
+                    <div class="mt-4">
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                            <div>Individual attention to weak areas</div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                            <div>Custom study plans based on board and subject</div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                            <div>Regular practice tests and performance tracking</div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                            <div>Strategic focus on exam techniques</div>
+                        </div>
+                    </div>
+                    <p class="mt-4">Whether you're looking for an IGCSE home tutor or prefer digital sessions via IGCSE
+                        online tuition, working with a qualified educator ensures targeted learning.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                        alt="IGCSE Tutoring" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Home Tuition Section -->
+    <section id="home-tuition" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">IGCSE Tutors Near Me: Local & In-Home Support</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                        alt="Home Tuition" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <p>For students who thrive on in-person learning, finding IGCSE tutors near me remains a preferred
+                        option. These tutors often provide IGCSE home tuition, which allows for direct interaction and
+                        tailored instruction in the comfort of your home.</p>
+                    <h5 class="mt-4">Home Tuition Is Ideal For:</h5>
+                    <div class="row mt-4">
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <i class="fas fa-user-friends"></i>
+                                </div>
+                                <h5>Personal Attention</h5>
+                                <p>Focus on weak areas and personalized doubt resolution.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <i class="fas fa-book-open"></i>
+                                </div>
+                                <h5>Hands-on Learning</h5>
+                                <p>Subjects requiring visual and hands-on explanation.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <h5>Comfortable Environment</h5>
+                                <p>Learning in a familiar and comfortable setting.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <h5>Structured Discipline</h5>
+                                <p>Students who need consistent routine and structure.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Local platforms like UrbanPro, LearnPick, and MyPrivateTutor offer verified listings of
+                        experienced IGCSE home tutors near your location.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Online Classes Section -->
+    <section id="online" class="py-5">
+        <div class="container">
+            <h2 class="section-title">IGCSE Online Tutoring: Learn from Anywhere</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <p>Modern learners are turning to IGCSE online tutoring for its flexibility and access to top-tier
+                        tutors across the globe. These sessions are interactive, convenient, and structured to follow
+                        the IGCSE curriculum closely.</p>
+                    <h5 class="mt-4">Advantages of IGCSE Online Tuition:</h5>
+                    <div class="row mt-4">
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <h5>Global Experts</h5>
+                                <p>Access to subject experts from around the world.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                                <h5>Digital Tools</h5>
+                                <p>Whiteboards, video lessons, and interactive quizzes.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <i class="fas fa-video"></i>
+                                </div>
+                                <h5>Recorded Sessions</h5>
+                                <p>Review classes anytime with recorded lectures.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <h5>Flexible Scheduling</h5>
+                                <p>Learn at your convenience with no commute time.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Whether you're in Dubai, Singapore, London, or Mumbai, online IGCSE tuition connects you with
+                        certified tutors from leading academic backgrounds.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                        alt="Online Classes" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subject-Specific Section -->
+    <section id="classes" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Subject-Specific Focus: IGCSE Maths, English, and Science</h2>
+            <p class="text-center mb-5">The most in-demand subjects for IGCSE tuition require focused approaches and
+                expert mentoring.</p>
+
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="class-card">
+                        <div class="class-header">
+                            <h4>IGCSE Maths</h4>
+                        </div>
+                        <div class="class-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Algebra, Geometry & Trigonometry</li>
+                                <li class="list-group-item">Statistics & Probability</li>
+                                <li class="list-group-item">Calculus foundations</li>
+                                <li class="list-group-item">Past paper practice</li>
+                                <li class="list-group-item">Problem-solving techniques</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="class-card">
+                        <div class="class-header">
+                            <h4>IGCSE Science</h4>
+                        </div>
+                        <div class="class-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Physics: Mechanics & Electricity</li>
+                                <li class="list-group-item">Chemistry: Reactions & Equations</li>
+                                <li class="list-group-item">Biology: Human Physiology</li>
+                                <li class="list-group-item">Practical lab guidance</li>
+                                <li class="list-group-item">Conceptual learning</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="class-card">
+                        <div class="class-header">
+                            <h4>IGCSE English</h4>
+                        </div>
+                        <div class="class-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Essay writing techniques</li>
+                                <li class="list-group-item">Reading comprehension</li>
+                                <li class="list-group-item">Language analysis</li>
+                                <li class="list-group-item">Literature appreciation</li>
+                                <li class="list-group-item">Oral communication skills</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <p>Hiring a subject specialist ensures the student is well-prepared for all components of the IGCSE
+                    assessments.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Choose Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">How to Choose the Right IGCSE Tuition Service</h2>
+            <p class="mb-5">Finding the right tutor can be a game-changer. Whether you're opting for IGCSE tuition near
+                me or online services, here's what to look for:</p>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h5>Verified Experience</h5>
+                        <p>Confirmed expertise in teaching the IGCSE curriculum.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h5>Subject Expertise</h5>
+                        <p>Specialization in Cambridge or Edexcel boards.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h5>Student Reviews</h5>
+                        <p>Verified feedback and success rates from past students.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <h5>Trial Sessions</h5>
+                        <p>Availability of demo classes to assess compatibility.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 offset-md-3 mb-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h5>Learning Style Match</h5>
+                        <p>Compatibility with the student's learning preferences.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <p>Platforms like First Tutors, Preply, and Skooli offer IGCSE online tuition with flexible plans and
+                    certified educators.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Frequently Asked Questions</h2>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How much does IGCSE tuition cost in India or the UK?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Fees range between ₹500–₹2,500/hour in India and £20–£60/hour in the UK, depending on the
+                                tutor's experience and subject taught.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Are IGCSE online tutors effective for exam preparation?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes. IGCSE online tutors use digital tools and mock tests to prepare students for all
+                                paper types, including extended and core level assessments.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I find IGCSE Maths tutors near me?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely. Search platforms like UrbanPro or Superprof for IGCSE Maths tutors near you
+                                or hire experienced faculty for home tuition.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Which board do IGCSE tutors follow—Cambridge or Edexcel?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Most tutors offer support for both Cambridge IGCSE and Edexcel IGCSE. Make sure to
+                                confirm their familiarity with your specific board.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section class="py-5">
+        <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">IGCSE</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">IGCSE</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Header End -->
-
-
-    <!-- About Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="img-fluid position-absolute w-100 h-100" src="img/Boards/igcselogo.jpeg" alt=""
-                            style="object-fit: cover;">
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <h6 class="section-title bg-white text-start text-primary pe-3">About Board</h6>
-                    <h2 class="mb-4 mobile_heading">IGCSE</h2>
-                    <p class="mb-4">The International General Certificate of Secondary Education (IGCSE) is the world’s
-                        most popular international curriculum developed for 14 to 16 year olds. The main objective of
-                        IGCSE is the cultivation of critical skill development in students which includes vital areas
-                        like enquiry, creative thinking, and problem solving. The programme lays firm foundation for
-                        subsequent lifelong learning. Currently, IGCSE is a two-year programme starting at the Class 9
-                        level.
-                    </p>
-                    <p class="mb-4"> A student who has done his/ her early schooling from any other board can join the
-                        IGCSE programme at the Class 9 level. Wisdom Academy’s IGCSE classes in Mumbai at Andheri,
-                        Borivali
-                        and IGCSE Home tutors in Mumbai are preparing students successfully for the IGCSE course. We
-                        also
-                        provide Online Tuitions for students of IGCSE based outside Mumbai, anywhere in the world.
-                    </p>
-                    <div class="row gy-2 gx-4 mb-4">
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate
-                            </p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate
-                            </p>
-                        </div>
+                    <div class="p-4 p-md-5 rounded bg-primary text-white">
+                        <h3 class="mb-4">Choose the Right Path Today</h3>
+                        <p class="lead">Whether you're exploring CBSE home tuition, CBSE tuition classes, or online
+                            coaching, the
+                            goal remains the same—helping students excel in a competitive academic environment. With
+                            experienced CBSE
+                            tutors near you or virtually available online, quality education is now more accessible than
+                            ever.</p>
+                        <p class="mb-4">Empower your child with personalized CBSE tutoring that aligns with their
+                            academic
+                            goals and
+                            future aspirations.</p>
+                        <button class="btn btn-secondary btn-lg mt-3">Get Started Now</button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- About End -->
+    </section>
 
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-4">
-                <a href="contact.html" class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                            <h3 class="mb-3">Standard 5</h3>
-                            <h6 class="subjects text-start">&#x2756 &nbsp English</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Physics</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Chemistry</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Maths</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Biology</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Economics</h6>
-                        </div>
-                    </div>
-                </a>
-                <a href="contact.html" class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                            <h3 class="mb-3">Standard 6</h3>
-                            <h6 class="subjects text-start">&#x2756 &nbsp English</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Physics</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Chemistry</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Maths</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Biology</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Economics</h6>
-                        </div>
-                    </div>
-                </a>
-                <a href="contact.html" class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                            <h3 class="mb-3">Standard 7</h3>
-                            <h6 class="subjects text-start">&#x2756 &nbsp English</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Physics</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Chemistry</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Maths</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Biology</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Economics</h6>
-                        </div>
-                    </div>
-                </a>
-                <a href="contact.html" class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                            <h3 class="mb-3">Standard 8</h3>
-                            <h6 class="subjects text-start">&#x2756 &nbsp English</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Physics</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Chemistry</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Maths</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Biology</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Economics</h6>
-                        </div>
-                    </div>
-                </a>
-                <a href="contact.html" class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                            <h3 class="mb-3">Standard 9</h3>
-                            <h6 class="subjects text-start">&#x2756 &nbsp English</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Physics</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Chemistry</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Maths</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Biology</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Economics</h6>
-                        </div>
-                    </div>
-                </a>
-                <a href="contact.html" class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                            <h3 class="mb-3">Standard 10</h3>
-                            <h6 class="subjects text-start">&#x2756 &nbsp English</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Physics</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Chemistry</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Maths</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Biology</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Economics</h6>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- Service End -->
-
-
-    <!-- Team Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
-                <h2 class="mb-5 mobile_heading">Expert Instructors</h2>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/Teachers/aloksir.jpeg" alt="">
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Alok Srivastav</h5>
-                            <small>MA Economic(1988) B.Ed (1995)</small>
-                            <h6>20+ years of teaching in Delhi & Mumbai. Maths Specialist</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/Teachers/virendrasir.jpeg" alt="">
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Virendra</h5>
-                            <small>BE - GATE, SET</small>
-                            <h6>5+ Years Experience Maths Specialist</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/Teachers/Kali.jpg" alt="">
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Kali</h5>
-                            <small>M.Sc Botony, GATE, SET</small>
-                            <h6>5+ Years Experience Biology Specialist</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/Teachers/prasadsir.jpeg" alt="">
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Prasad Ghadi</h5>
-                            <small>M.Sc Chemistry, GATE, SET</small>
-                            <h6>5+ Years Experience Chemistry Specialist</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Team End -->
-
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
-                <h2 class="mb-5 mobile_heading">Our Students Say!</h2>
-            </div>
-            <div class="owl-carousel testimonial-carousel position-relative">
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/Students/G3.jpg"
-                        style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Manasvi Rajput</h5>
-                    <p>IGCSE May 2023 (Dhirubhai Ambani International School DAIS, Mumbai)</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                        <p class="mb-0">The curriculum is comprehensive and well-structured, covering all necessary
-                            topics in-depth. I feel well-prepared for my exams thanks to Edu-Excel.</p>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/Students/B4.jpg"
-                        style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Vivaan Khedkar</h5>
-                    <p>IGCSE March 2023 (SVKM JV Parekh International, Mumbai)</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                        <p class="mb-0">Classes at Edu-Excel are highly interactive. The instructors encourage
-                            discussions and hands-on learning, making every session engaging and productive.</p>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/Students/G4.jpg"
-                        style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Ananya Binumohan</h5>
-                    <p>IGCSE May 2023 C.P Goenka International School (CPGIS-Mumbai)</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                        <p class="mb-0">Edu-Excel's focus on results is evident. The continuous assessment and feedback
-                            system help students track their progress effectively. The also Offer's online lectures.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
-
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
+    <!-- Footer -->
+    <div class="container-fluid bg-dark text-light footer mt-5 wow fadeIn" data-wow-delay="0.1s"
+        style="background-color: #181d38 !important;">
+        <div class="container pb-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Quick Link</h4>
                     <a class="btn btn-link" href="igcse.html">IGCSE</a>
-                    <a class="btn btn-link" href="alevels.html">A-LEVELS</a>
+                    <a class="btn btn-link" href="as-level.html">A-LEVELS</a>
                     <a class="btn btn-link" href="ibdp.html">IBDP</a>
                     <a class="btn btn-link" href="ibmyp.html">IB-MYP</a>
                     <a class="btn btn-link" href="contact.html">Enquiry</a>
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
-                  <p class="mb-2"><i><a class="fa fa-map-marker-alt me-3" href="https://maps.app.goo.gl/Pwt8mFh2axtEvA7D6"></a></i>Old Nagardas Road, Andheri East</p>
-                  <p class="mb-2"><i><a class="fa fa-phone-alt me-3" href="tel:+91-87791-96771"></a></i>+91 87791 96771</p>
-                  <p class="mb-2"><i><a class="fa fa-envelope me-3" href="mailto:edu.excel.internationals@gmail.com"></a></i>edu.excel.internationals@gmail.com</p>
+                    <p class="mb-2"><i><a class="fa fa-map-marker-alt me-3"
+                                href="https://maps.app.goo.gl/Pwt8mFh2axtEvA7D6"></a></i>Old Nagardas Road, Andheri East
+                    </p>
+                    <p class="mb-2"><i><a class="fa fa-phone-alt me-3" href="tel:+91-87791-96771"></a></i>+91 87791
+                        96771</p>
+                    <p class="mb-2"><i><a class="fa fa-envelope me-3"
+                                href="mailto:edu.excel.internationals@gmail.com"></a></i>edu.excel.internationals@gmail.com
+                    </p>
 
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -394,32 +487,54 @@
                     </a><br>
                     <h4 class="text-white mb-3">Social Media</h4>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href="https://wa.me/+918779196771?text="><i class="fab fa-whatsapp"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://instagram.com/edu__excel?igshid=NzZhOTFlYzFmZQ=="><i class="fab fa-instagram"></i></a>
-                       <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>-->
-                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/edu-excel/"><i class="fab fa-linkedin"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://wa.me/+918779196771?text="><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social"
+                            href="https://instagram.com/edu__excel?igshid=NzZhOTFlYzFmZQ=="><i
+                                class="fab fa-instagram"></i></a>
+                        <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>-->
+                        <a class="btn btn-outline-light btn-social"
+                            href="https://www.linkedin.com/company/edu-excel/"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Footer End -->
 
+    <script>
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                } else {
+                    answer.style.display = 'block';
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                }
+            });
+        });
 
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

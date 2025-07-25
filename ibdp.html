@@ -2,67 +2,31 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Edu-Excel</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Find top-rated IBDP tutors online or near you. Personalized IB tutoring for HL/SL subjects by expert IBDP online tutors. Book a trial now!">
+    <title>Top IBDP Tutors Online & Near You | Expert IB Tutoring</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
     <!-- Favicon -->
     <link href="img/logo.png" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="css/courses.bootstrap.min.css">
+    <link rel="stylesheet" href="css/courses.css">
+    <link rel="stylesheet" href="css/courses-default.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="rahul_responsive.css" rel="stylesheet">
-  
-
-  
-  	<meta name="google-site-verification" content="4XA7iS62VpErpFKtKv4rM1IyVZ1-LLH1OD13L4ipjfo" />
-  	<!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YPQL75410C"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-YPQL75410C');
-  	</script>
-  
 </head>
 
 <body>
-    <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
-    <!-- Spinner End -->
-
-
-    <!-- Navbar Start -->
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><i><img class="logo_image" src="img/logo.png"></i>Edu-Excel</h2>
+            <h2 class="m-0 text-primary">
+                <i><img class="logo_image" src="img/logo.png" alt="Logo"></i>Edu-Excel
+            </h2>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -72,15 +36,33 @@
                 <a href="index.html" class="nav-item nav-link">Home</a>
                 <a href="aboutus.html" class="nav-item nav-link">About Us</a>
                 <a href="resources.html" class="nav-item nav-link">Resources</a>
-              	<div class="nav-item dropdown">
+
+                <!-- Courses Dropdown -->
+                <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Courses</a>
-                    <div class="dropdown-menu fade-down m-0">
-                        <a href="igcse.html" class="dropdown-item">IGCSE</a>
-                        <a href="alevels.html" class="dropdown-item">A-LEVELS</a>
-                        <a href="ibdp.html" class="dropdown-item active">IBDP</a>
-                        <a href="ibmyp.html" class="dropdown-item">IB-MYP</a>
+                    <div class="dropdown-menu fade-down m-0 p-3" style="min-width: 325px;">
+                        <div class="row">
+                            <!-- National -->
+                            <div class="col-12 col-md-6">
+                                <h6 class="dropdown-header">National</h6>
+                                <a href="icse.html" class="dropdown-item">ICSE</a>
+                                <a href="cbse.html" class="dropdown-item">CBSE</a>
+                                <a href="hsc.html" class="dropdown-item">HSC</a>
+                                <a href="competitive-exams.html" class="dropdown-item">Competitive Exam <br>(JEE, NEET,
+                                    MHT-CET)</a>
+                            </div>
+                            <!-- International -->
+                            <div class="col-12 col-md-6">
+                                <h6 class="dropdown-header">International</h6>
+                                <a href="igcse.html" class="dropdown-item">IGCSE</a>
+                                <a href="as-level.html" class="dropdown-item">AS-A Level</a>
+                                <a href="ibdp.html" class="dropdown-item">IBDP</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Gallery Dropdown -->
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Gallery</a>
                     <div class="dropdown-menu fade-down m-0">
@@ -89,244 +71,427 @@
                     </div>
                 </div>
             </div>
-            <a href="contact.html" class="btn btn-primary mobile_enquiry py-4 px-lg-5 d-lg-block">Enquiry<i
-                    class="fa fa-arrow-right ms-3"></i></a>
+            <a href="contact.html" class="btn btn-primary mobile_enquiry py-4 px-lg-5 d-lg-block no-border-radius">
+                Enquiry<i class="fa fa-arrow-right ms-3"></i>
+            </a>
         </div>
     </nav>
-    <!-- Navbar End -->
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1>IBDP Tutors: Online & In-Person Expert Tutoring for IB Success</h1>
+                    <p>The International Baccalaureate Diploma Programme (IBDP) is known for its academic rigor,
+                        critical thinking focus, and university-level curriculum. Whether you're tackling Higher Level
+                        (HL) or Standard Level (SL) subjects, having the support of a skilled IBDP tutor can make a
+                        significant difference.</p>
+                    <!-- <div class="d-flex flex-wrap gap-3">
+                        <button class="btn btn-primary">Find Home Tutors</button>
+                        <button class="btn btn-secondary">Join Online Classes</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Header Start -->
-    <div class="container-fluid bg-primary py-5 mb-5 page-header">
-        <div class="container py-5">
+    <!-- Why IBDP Tutor Section -->
+    <section id="why" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Why Choose IBDP Tutors for Academic Excellence?</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <p>IBDP students face intense pressure across multiple disciplines, including Theory of Knowledge
+                        (TOK), Extended Essay (EE), and Internal Assessments (IA). With subject-specific complexity and
+                        unique assessment styles, working with an experienced IBDP tutor provides structure, clarity,
+                        and exam-focused preparation.</p>
+                    <h5 class="mt-4">Benefits of Hiring an IBDP Tutor:</h5>
+                    <div class="mt-4">
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                            <div>Customized lesson plans for HL and SL subjects</div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                            <div>Support for core components like EE, IA, and TOK</div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                            <div>One-on-one attention to target weak areas</div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                            <div>Past paper practice and IB exam strategies</div>
+                        </div>
+                    </div>
+                    <p class="mt-4">Whether you prefer an IBDP tutor near you or are open to virtual learning, expert
+                        guidance ensures better performance and stress-free preparation.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                        alt="IBDP Tutoring" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Online Tutoring Section -->
+    <section id="online" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">IBDP Online Tutor: Flexible Learning, Global Access</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                        alt="Online Tutoring" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <p>With the rise of remote education, online tutors for IBDP have become increasingly popular. These
+                        sessions offer the same quality instruction as in-person classes while providing unmatched
+                        convenience.</p>
+                    <h5 class="mt-4">Advantages of IBDP Online Tutoring:</h5>
+                    <div class="row mt-4">
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <h5>Global Experts</h5>
+                                <p>Access to IB subject experts worldwide</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <i class="fas fa-laptop"></i>
+                                </div>
+                                <h5>Interactive Tools</h5>
+                                <p>Digital whiteboards, quizzes, and recordings</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <h5>Flexible Scheduling</h5>
+                                <p>Learn from anywhere at your own pace</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <i class="fas fa-comments"></i>
+                                </div>
+                                <h5>Quick Feedback</h5>
+                                <p>Personalized feedback on assignments</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Whether you're in India, UAE, the UK, or Singapore, IBDP online tutors are ideal for students
+                        balancing academics, activities, and other commitments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subject Focus Section -->
+    <section id="subjects" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">IBDP Tutoring for Key Subjects: HL & SL Focus</h2>
+            <p class="text-center mb-5">Effective IBDP tutoring involves subject-matter expertise and alignment with IB
+                standards. Top tutors specialize in various subjects across groups:</p>
+
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="class-card">
+                        <div class="class-header">
+                            <h4>Math AA & AI</h4>
+                        </div>
+                        <div class="class-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">HL/SL concepts</li>
+                                <li class="list-group-item">Calculator skills</li>
+                                <li class="list-group-item">Real-world applications</li>
+                                <li class="list-group-item">Exam strategies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="class-card">
+                        <div class="class-header">
+                            <h4>Sciences</h4>
+                        </div>
+                        <div class="class-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Physics & Chemistry</li>
+                                <li class="list-group-item">Biology</li>
+                                <li class="list-group-item">Experimental design</li>
+                                <li class="list-group-item">IA support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="class-card">
+                        <div class="class-header">
+                            <h4>Humanities</h4>
+                        </div>
+                        <div class="class-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Economics</li>
+                                <li class="list-group-item">Business Management</li>
+                                <li class="list-group-item">Data interpretation</li>
+                                <li class="list-group-item">Case studies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="class-card">
+                        <div class="class-header">
+                            <h4>Languages</h4>
+                        </div>
+                        <div class="class-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">English A & B</li>
+                                <li class="list-group-item">Text analysis</li>
+                                <li class="list-group-item">Paper strategies</li>
+                                <li class="list-group-item">Oral presentations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <p>Many students also seek help for TOK presentations, Extended Essays, and Internal Assessments, where
+                    structure and clarity are crucial.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Home Tuition Section -->
+    <section id="home-tuition" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">IBDP Tutor Near Me: Finding Local Experts</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <p>If you prefer face-to-face learning, you can search for an IBDP tutor near me using local
+                        platforms or international tutoring agencies. Home tutoring offers students a focused
+                        environment with fewer distractions.</p>
+                    <h5 class="mt-4">Home Tuition Is Ideal For:</h5>
+                    <div class="row mt-4">
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <i class="fas fa-chalkboard-teacher"></i>
+                                </div>
+                                <h5>Structured Learning</h5>
+                                <p>Students who thrive in offline sessions</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <i class="fas fa-flask"></i>
+                                </div>
+                                <h5>Hands-on Subjects</h5>
+                                <p>Physics experiments and demonstrations</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h5>Family Involvement</h5>
+                                <p>Parents preferring offline progress tracking</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <h5>Major Cities</h5>
+                                <p>Available in Dubai, Mumbai, London, Singapore</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Leading cities have growing networks of professional IBDP home tutors with excellent track
+                        records.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                        alt="Home Tuition" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Choose Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">How to Choose the Best IBDP Tutor</h2>
+            <p class="mb-5">Not all tutors are created equal. When choosing an IBDP tutor, whether online or offline,
+                consider the following factors:</p>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h5>IB-Specific Experience</h5>
+                        <p>Verify expertise with IB curriculum and updates</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h5>Track Record</h5>
+                        <p>Results of past students</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h5>Core Components</h5>
+                        <p>Ability to assist with IAs, EEs, and TOK</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h5>Teaching Approach</h5>
+                        <p>Student-centered methodology</p>
+                    </div>
+                </div>
+                <div class="col-md-6 offset-md-3 mb-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h5>Verified Profiles</h5>
+                        <p>Through platforms like Lanterna Education</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <p>Platforms like Lanterna Education, MyPrivateTutor, and TutorChase offer verified profiles of
+                    experienced IB tutors online, with trial sessions and academic reviews.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Frequently Asked Questions</h2>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How much does IBDP tutoring cost?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>IBDP tuition typically ranges from ₹1,500 to ₹4,000 per hour in India, and $30 to
+                                $100/hour globally, depending on tutor expertise and subject.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Are IBDP online tutors effective for HL subjects like Math or Physics?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, top IBDP online tutors use interactive tools and past exam strategies, making even
+                                HL subjects manageable and engaging.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can a tutor help with IBDP Internal Assessments and Extended Essay?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely. Expert tutors guide students through topic selection, research, formatting,
+                                and critical analysis for IAs and EEs.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Where can I find an IBDP tutor near me?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can use platforms like Superprof, UrbanPro, or international IB tutoring agencies to
+                                find certified IBDP tutors near you for home or in-person sessions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section class="py-5">
+        <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">IBDP</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">IBDP</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Header End -->
-
-
-    <!-- About Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="img-fluid position-absolute w-100 h-100" src="img/Boards/ibdp.png" alt=""
-                            style="object-fit: cover;">
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
-                    <h2 class="mb-4  mobile_heading">IBDP</h2>
-                    <p class="mb-4">The International Baccalaureate Diploma Programme (IBDP) is a rigorous, two-year
-                        pre-university course of study designed for highly motivated and intellectually curious students
-                        aged 16 to 19. The IBDP is known for its holistic approach to education, combining a challenging
-                        academic curriculum with a strong emphasis on personal development, creativity, and community
-                        engagement.</p>
-
-                    <div class="row gy-2 gx-4 mb-4">
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate
-                            </p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate
-                            </p>
-                        </div>
+                    <div class="p-4 p-md-5 rounded bg-primary text-white">
+                        <h3 class="mb-4">Achieve IB Success Today</h3>
+                        <p class="lead">Achieving success in the International Baccalaureate Diploma Programme is easier
+                            with the right support. Whether you need help with a specific HL subject, core components
+                            like EE and TOK, or general academic planning, expert IBDP tutors provide targeted,
+                            high-impact guidance.</p>
+                        <p class="mb-4">From online IBDP tutoring to in-home tuition, options are available to suit
+                            every learner's needs. Start early, choose a qualified tutor, and invest in your IB success.
+                        </p>
+                        <button class="btn btn-secondary btn-lg mt-3">Find Your Tutor Now</button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- About End -->
+    </section>
 
-
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-4">
-            
-                <a href="contact.html" class="col-lg-6 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                            <h3 class="mb-3">Standard 11</h3>
-                            <h6 class="subjects text-start">&#x2756 &nbsp language and literature</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Language acquisition</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Individuals and societies</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Science</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Mathematics</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Arts</h6>
-                        </div>
-                    </div>
-                </a>
-                
-                <a href="contact.html" class="col-lg-6 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                            <h3 class="mb-3">Standard 12</h3>
-                            <h6 class="subjects text-start">&#x2756 &nbsp language and literature</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Language acquisition</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Individuals and societies</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Science</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Mathematics</h6>
-                            <h6 class="subjects text-start">&#x2756 &nbsp Arts</h6>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- Service End -->
-
-
-    <!-- Team Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
-                <h2 class="mb-5 mobile_heading">Expert Instructors</h2>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/Teachers/ganeshsir.jpeg" alt="">
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Ganesh Gupta</h5>
-                            <small>M.Sc&nbsp;Physics,&nbsp;GATE,&nbsp;SET,&nbsp;BARC,&nbsp;ISRO</small>
-                            <h6>10+ Years Experience Physics Specialist</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/Teachers/virendrasir.jpeg" alt="">
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Virendra</h5>
-                            <small>BE - GATE, SET</small>
-                            <h6>5+ Years Experience Maths Specialist</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/Teachers/prasadsir.jpeg" alt="">
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Prasad Ghadi</h5>
-                            <small>M.Sc Chemistry, GATE, SET</small>
-                            <h6>5+ Years Experience Chemistry Specialist</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/Teachers/sheetal.png" alt="">
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Sheetal</h5>
-                            <small>M.Sc Bio-Informatics, GATE, SET</small>
-                            <h6>5+ Years Experience Biology Specialist</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Team End -->
-
-
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
-                <h2 class="mb-5 mobile_heading">Our Students Say!</h2>
-            </div>
-            <div class="owl-carousel testimonial-carousel position-relative">
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/Students/B5.jpg"
-                        style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Purav Bhansali</h5>
-                    <p>IBDP May 2022 (Jamnabai Narsee International School JNIS - Mumbai)</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                        <p class="mb-0">This class empowers students to take ownership of their learning. I've gained
-                            confidence in my abilities and become a more independent learner. Best Classes for IB-DP.</p>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/Students/boy 7.jpg"
-                        style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">veer sinha</h5>
-                    <p>IBDP May 2023(The International School of Kuala Lumpur (ISKL) Malaysia)</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                        <p class="mb-0">This is the first time I have attended a class in this format and wondered how
-                            effective it would be. It was very effective and interested in attending other classes in
-                            the same format.</p>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/Students/G5.jpg"
-                        style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Rachna Kapoor</h5>
-                    <p>IBDP May 2022 (Singapore International School - Mumbai)</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                        <p class="mb-0">Transitioning from in-person to online classes and back is effortless at
-                            Edu-Excel. The consistency in teaching quality is commendable. Also thanks to virendra sir
-                            for teaching maths in easy way.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
+    <!-- Footer -->
+    <div class="container-fluid bg-dark text-light footer mt-5 wow fadeIn" data-wow-delay="0.1s"
+        style="background-color: #181d38 !important;">
+        <div class="container pb-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Quick Link</h4>
                     <a class="btn btn-link" href="igcse.html">IGCSE</a>
-                    <a class="btn btn-link" href="alevels.html">A-LEVELS</a>
+                    <a class="btn btn-link" href="as-level.html">A-LEVELS</a>
                     <a class="btn btn-link" href="ibdp.html">IBDP</a>
                     <a class="btn btn-link" href="ibmyp.html">IB-MYP</a>
                     <a class="btn btn-link" href="contact.html">Enquiry</a>
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
-                  <p class="mb-2"><i><a class="fa fa-map-marker-alt me-3" href="https://maps.app.goo.gl/Pwt8mFh2axtEvA7D6"></a></i>Old Nagardas Road, Andheri East</p>
-                  <p class="mb-2"><i><a class="fa fa-phone-alt me-3" href="tel:+91-87791-96771"></a></i>+91 87791 96771</p>
-                  <p class="mb-2"><i><a class="fa fa-envelope me-3" href="mailto:edu.excel.internationals@gmail.com"></a></i>edu.excel.internationals@gmail.com</p>
+                    <p class="mb-2"><i><a class="fa fa-map-marker-alt me-3"
+                                href="https://maps.app.goo.gl/Pwt8mFh2axtEvA7D6"></a></i>Old Nagardas Road, Andheri East
+                    </p>
+                    <p class="mb-2"><i><a class="fa fa-phone-alt me-3" href="tel:+91-87791-96771"></a></i>+91 87791
+                        96771</p>
+                    <p class="mb-2"><i><a class="fa fa-envelope me-3"
+                                href="mailto:edu.excel.internationals@gmail.com"></a></i>edu.excel.internationals@gmail.com
+                    </p>
 
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -335,32 +500,54 @@
                     </a><br>
                     <h4 class="text-white mb-3">Social Media</h4>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href="https://wa.me/+918779196771?text="><i class="fab fa-whatsapp"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://instagram.com/edu__excel?igshid=NzZhOTFlYzFmZQ=="><i class="fab fa-instagram"></i></a>
-                       <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>-->
-                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/edu-excel/"><i class="fab fa-linkedin"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://wa.me/+918779196771?text="><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social"
+                            href="https://instagram.com/edu__excel?igshid=NzZhOTFlYzFmZQ=="><i
+                                class="fab fa-instagram"></i></a>
+                        <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>-->
+                        <a class="btn btn-outline-light btn-social"
+                            href="https://www.linkedin.com/company/edu-excel/"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Footer End -->
 
+    <script>
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                } else {
+                    answer.style.display = 'block';
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                }
+            });
+        });
 
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
